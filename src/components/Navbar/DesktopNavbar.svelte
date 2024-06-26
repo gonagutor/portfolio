@@ -6,10 +6,10 @@
 	<h1 class="title">GAT</h1>
 	<ul class="navigator">
 		<li><a href="/">{$t('title.aboutMe')}</a></li>
-		<li><a href="/my-techstack">{$t('title.myTechstack')}</a></li>
+		<li><a href="/techstack">{$t('title.myTechstack')}</a></li>
 		<li><a href="/projects">{$t('title.projects')}</a></li>
 		<li><a href="/experience">{$t('title.experience')}</a></li>
-		<li><a id="contactMe" href="/contact-me">{$t('contactMe')}</a></li>
+		<li><a id="contactMe" href="/contact">{$t('contactMe')}</a></li>
 	</ul>
 </nav>
 

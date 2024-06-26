@@ -39,9 +39,9 @@
 	</section>
 	<section class="navigator-container">
 		<ul class="navigator">
-			<li><a id="contactMe" href="/contact-me">{$t('contactMe')}</a></li>
+			<li><a id="contactMe" href="/contact">{$t('contactMe')}</a></li>
 			<li><a href="/">{$t('title.aboutMe')}</a></li>
-			<li><a href="/my-techstack">{$t('title.myTechstack')}</a></li>
+			<li><a href="/techstack">{$t('title.myTechstack')}</a></li>
 			<li><a href="/projects">{$t('title.projects')}</a></li>
 			<li><a href="/experience">{$t('title.experience')}</a></li>
 		</ul>

@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>gonagutor - {$t('title.aboutMe')}</title>
+	<title>gonagutor - {$t('contactMe')}</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<p>About me</p>
+<p>Contact me</p>
