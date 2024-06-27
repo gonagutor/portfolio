@@ -1,13 +1,20 @@
-<script>
+<script lang="ts">
 	import Navbar from '$components/Navbar/Navbar.svelte';
+	import { fly } from 'svelte/transition';
 	import './styles.css';
+
+	export let data;
 </script>
 
 <div class="app">
 	<Navbar />
 
 	<main>
-		<slot />
+		{#key data.url}
+			<div in:fly={{ x: 200, duration: 500, delay: 500 }} out:fly={{ x: -200, duration: 500 }}>
+				<slot />
+			</div>
+		{/key}
 	</main>
 </div>
 
