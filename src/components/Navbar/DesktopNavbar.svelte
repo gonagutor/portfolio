@@ -14,6 +14,12 @@
 </nav>
 
 <style>
+	@media (max-width: 842px) {
+		nav {
+			display: none !important;
+		}
+	}
+
 	nav {
 		display: flex;
 		flex-direction: row;

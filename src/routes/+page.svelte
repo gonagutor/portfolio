@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LinesBackground from '$components/LinesBackground/LinesBackground.svelte';
+	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
 	import { t } from '$lib/i18n/i18n';
 </script>
 
@@ -11,6 +12,7 @@
 <LinesBackground>
 	<div class="about-me-container">
 		<div class="about-me-picture-container">
+			<ThemeChanger size={54} />
 			<img src="/images/me.jpg" alt={$t('alt.myPicture')} />
 		</div>
 		<div class="about-me-text-container">
@@ -51,13 +53,23 @@
 
 <style>
 	.about-me-container {
-		display: grid;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+
 		min-height: calc(100vh - 4.688rem - 3rem);
 		min-height: calc(100dvh - 4.688rem - 3rem);
-		grid-template-columns: 1fr 2fr;
-		align-items: center;
-		gap: 2rem;
 		padding-inline: 7rem;
+	}
+
+	@media (max-width: 1268px) {
+		.about-me-container {
+			flex-wrap: wrap;
+			padding-inline: 0;
+		}
 	}
 
 	.about-me-picture-container > img {
@@ -69,6 +81,7 @@
 
 	.about-me-title {
 		font-family: var(--font-display);
+		font-size: 3rem;
 	}
 	.about-me-text {
 		font-size: 1.5rem;

@@ -1,23 +1,14 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
-
-	let prefersLight: boolean = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-	function onChangeTheme() {}
+	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
 </script>
 
 <nav>
 	<section class="title-language-theme">
 		<h1 class="title">GAT</h1>
 		<LanguageChanger>
-			<button class="change-theme-button" on:click={onChangeTheme}>
-				{#if prefersLight}
-					<img src="icons/moon.svg" alt={$t('alt.enableDarkMode')} />
-				{:else}
-					<img src="icons/sun.svg" alt={$t('alt.disableDarkMode')} />
-				{/if}
-			</button>
+			<ThemeChanger />
 		</LanguageChanger>
 	</section>
 	<section class="navigator-container">
@@ -32,8 +23,16 @@
 </nav>
 
 <style>
+	@media (max-width: 842px) {
+		nav {
+			display: unset !important;
+		}
+	}
+
 	nav {
-		width: 100vw;
+		display: none;
+
+		width: calc(100vw - 1.04rem);
 	}
 
 	.title-language-theme {
@@ -53,18 +52,6 @@
 		font-size: 2rem;
 		padding: 0;
 		margin: 0;
-	}
-
-	.change-theme-button {
-		margin-left: 0.25rem;
-		border: none;
-		display: grid;
-		grid: 1fr;
-		justify-items: center;
-		align-items: center;
-
-		background: none;
-		color: var(--background);
 	}
 
 	.navigator-container {
