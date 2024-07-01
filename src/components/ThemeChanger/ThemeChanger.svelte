@@ -19,7 +19,7 @@
 <style>
 	.change-theme-button {
 		display: grid;
-		position: absolute;
+		position: relative;
 		justify-items: center;
 		align-items: center;
 		grid: 1fr;
