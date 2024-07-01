@@ -1,12 +1,8 @@
 <script lang="ts">
-	import { t, locale } from '$lib/i18n/i18n';
+	import { t } from '$lib/i18n/i18n';
+	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 
 	let prefersLight: boolean = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-	function onChangeLanguage(lang: string) {
-		if ($locale === lang) return;
-		$locale = lang;
-	}
 
 	function onChangeTheme() {}
 </script>
@@ -14,20 +10,7 @@
 <nav>
 	<section class="title-language-theme">
 		<h1 class="title">GAT</h1>
-		<div class="button-container">
-			<button
-				class="language-button {$locale == 'es' && 'active'}"
-				on:click={() => onChangeLanguage('es')}
-			>
-				ES
-			</button>
-			<button
-				class="language-button {$locale == 'en' && 'active'}"
-				on:click={() => onChangeLanguage('en')}
-			>
-				EN
-			</button>
-
+		<LanguageChanger>
 			<button class="change-theme-button" on:click={onChangeTheme}>
 				{#if prefersLight}
 					<img src="icons/moon.svg" alt={$t('alt.enableDarkMode')} />
@@ -35,7 +18,7 @@
 					<img src="icons/sun.svg" alt={$t('alt.disableDarkMode')} />
 				{/if}
 			</button>
-		</div>
+		</LanguageChanger>
 	</section>
 	<section class="navigator-container">
 		<ul class="navigator">
@@ -70,34 +53,6 @@
 		font-size: 2rem;
 		padding: 0;
 		margin: 0;
-	}
-
-	.button-container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-	}
-
-	.language-button {
-		padding-inline: 1rem;
-		padding-block: 0.5rem;
-		border: none;
-
-		font-family: var(--font);
-		font-weight: bold;
-		font-size: 1.5rem;
-
-		color: var(--background);
-		background-color: var(--foreground);
-		border-radius: 50rem;
-		letter-spacing: -1px;
-	}
-
-	.language-button.active {
-		color: var(--foreground);
-		background: var(--highlight-gradient);
 	}
 
 	.change-theme-button {

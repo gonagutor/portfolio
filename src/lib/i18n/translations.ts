@@ -7,7 +7,8 @@ const translations: any = {
 		'title.projects': 'Projects',
 		'title.experience': 'Experience',
 		'alt.enableDarkMode': 'Enable dark mode',
-		'alt.disableDarkMode': 'Disable dark mode'
+		'alt.disableDarkMode': 'Disable dark mode',
+		'alt.myPicture': 'A picture of me'
 	},
 	es: {
 		title: 'GAT',
@@ -17,7 +18,8 @@ const translations: any = {
 		'title.projects': 'Proyectos',
 		'title.experience': 'Experiencia',
 		'alt.enableDarkMode': 'Activar modo oscuro',
-		'alt.disableDarkMode': 'Desactivar modo oscuro'
+		'alt.disableDarkMode': 'Desactivar modo oscuro',
+		'alt.myPicture': 'Foto de mi'
 	}
 };
 
