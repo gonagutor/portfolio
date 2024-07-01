@@ -2,16 +2,14 @@
 	import Sun from '$components/icons/Sun.svelte';
 	import Moon from '$components/icons/Moon.svelte';
 	import { t } from '$lib/i18n/i18n';
+	import { createThemeStore } from '$lib/stores/theme';
 
-	let prefersLight: boolean = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-	function onChangeTheme() {}
-
+	const { themeStore, toggleTheme } = createThemeStore();
 	export let size = 32;
 </script>
 
-<button class="change-theme-button" on:click={onChangeTheme}>
-	{#if prefersLight}
+<button class="change-theme-button" on:click={toggleTheme}>
+	{#if $themeStore === 'light'}
 		<Moon {size} ariaLabel={$t('alt.enableDarkMode')} />
 	{:else}
 		<Sun {size} ariaLabel={$t('alt.disableDarkMode')} />
@@ -21,12 +19,13 @@
 <style>
 	.change-theme-button {
 		display: grid;
+		position: absolute;
 		justify-items: center;
 		align-items: center;
 		grid: 1fr;
 
 		margin-left: 0.25rem;
-		z-index: 9999;
+		z-index: 2;
 
 		cursor: pointer;
 		border: none;

@@ -55,7 +55,7 @@
 		position: absolute;
 		height: 100%;
 		padding: 3rem 3rem 0 3rem;
-		z-index: 999;
+		z-index: 1;
 	}
 
 	#bottom-line-container {

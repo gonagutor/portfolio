@@ -16,7 +16,7 @@
 			<img src="/images/me.jpg" alt={$t('alt.myPicture')} />
 		</div>
 		<div class="about-me-text-container">
-			<h1 class="about-me-title">About me</h1>
+			<h1 class="about-me-title">{$t('title.aboutMe')}</h1>
 			<p class="about-me-text">
 				¡Hola! Soy Gonzalo
 				<br />

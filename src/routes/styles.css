@@ -19,20 +19,18 @@
 	color: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--font-display: Vaulto, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		--font: 'Anonymous Pro', 'Fira Mono', monospace;
+[data-theme='dark'] {
+	--font-display: Vaulto, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font: 'Anonymous Pro', 'Fira Mono', monospace;
 
-		--foreground: #ebe6e6;
-		--background: #000000;
-		--button-gradient: linear-gradient(to bottom right, #d1c9c9, #f3f3f3);
-		--highlight-gradient: linear-gradient(to bottom right, #777777, #000000);
+	--foreground: #ebe6e6;
+	--background: #000000;
+	--button-gradient: linear-gradient(to bottom right, #d1c9c9, #f3f3f3);
+	--highlight-gradient: linear-gradient(to bottom right, #777777, #000000);
 
-		font-family: var(--font);
-		color: var(--foreground);
-	}
+	font-family: var(--font);
+	color: var(--foreground);
 }
 
 body {
