@@ -4,6 +4,7 @@
 	import Linkedin from '$components/icons/Linkedin.svelte';
 	import Mail from '$components/icons/Mail.svelte';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
+	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
 </script>
 
 <div class="desktop-lines-background">
@@ -24,6 +25,7 @@
 			<div class="vertical-line" />
 		</div>
 		<div id="bottom-line-container">
+			<ThemeChanger />
 			<LanguageChanger />
 			<div id="bottom-line" />
 		</div>
@@ -74,6 +76,7 @@
 		flex-direction: row;
 		align-items: center;
 		flex: 1;
+		gap: 1rem;
 
 		margin-left: 1.5rem;
 		margin-bottom: 1.5rem;
@@ -83,7 +86,6 @@
 		width: 100%;
 		height: 1px;
 		background: var(--foreground);
-		margin-left: 2rem;
 		margin-right: 3rem;
 	}
 
