@@ -1,6 +1,6 @@
 import { derived, writable } from 'svelte/store';
 import translations from './translations';
-import { get } from 'lodash';
+import _ from 'lodash';
 
 export const locale = writable('en');
 export const locales = Object.keys(translations);
@@ -12,7 +12,7 @@ function translate(locale: string, key: string, vars: any) {
 	if (!locale) throw new Error(`no translation for key "${key}"`);
 
 	// Grab the translation from the translations object.
-	let text = get(translations[locale], key, key);
+	let text = _.get(translations[locale], key, key);
 
 	if (text === key) console.error(`no translation found for ${locale}.${key}`);
 
