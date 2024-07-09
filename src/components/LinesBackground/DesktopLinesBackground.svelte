@@ -5,6 +5,7 @@
 	import Mail from '$components/icons/Mail.svelte';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
+	import { ROUTES } from '$lib/constants';
 </script>
 
 <div class="desktop-lines-background">
@@ -31,7 +32,7 @@
 		</div>
 		<div class="vertical-line-container">
 			<div class="vertical-line" />
-			<a href="/techstack"><Arrow /></a>
+			<a href={ROUTES.MY_TECHSTACK}><Arrow /></a>
 			<div class="vertical-line" />
 		</div>
 	</div>

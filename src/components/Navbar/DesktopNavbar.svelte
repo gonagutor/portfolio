@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
+	import { ROUTES } from '$lib/constants';
 </script>
 
 <nav>
 	<h1 class="title">{$t('header')}</h1>
 	<ul class="navigator">
-		<li><a href="/">{$t('title.aboutMe')}</a></li>
-		<li><a href="/techstack">{$t('title.myTechstack')}</a></li>
-		<li><a href="/projects">{$t('title.projects')}</a></li>
-		<li><a href="/experience">{$t('title.experience')}</a></li>
-		<li><a id="contactMe" href="/contact">{$t('contactMe')}</a></li>
+		<li><a href={ROUTES.ABOUT_ME}>{$t('title.aboutMe')}</a></li>
+		<li><a href={ROUTES.MY_TECHSTACK}>{$t('title.myTechstack')}</a></li>
+		<li><a href={ROUTES.PROJECTS}>{$t('title.projects')}</a></li>
+		<li><a href={ROUTES.EXPERIENCE}>{$t('title.experience')}</a></li>
+		<li><a id="contactMe" href={ROUTES.CONTACT_ME}>{$t('contactMe')}</a></li>
 	</ul>
 </nav>
 

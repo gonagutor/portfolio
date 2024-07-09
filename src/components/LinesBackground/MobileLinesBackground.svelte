@@ -5,6 +5,7 @@
 	import Mail from '$components/icons/Mail.svelte';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
+	import { ROUTES } from '$lib/constants';
 	import { t } from '$lib/i18n/i18n';
 </script>
 
@@ -29,7 +30,7 @@
 				<ThemeChanger size={42} />
 				<LanguageChanger />
 			</div>
-			<a id="next-page-link" href="/techstack">
+			<a id="next-page-link" href={ROUTES.MY_TECHSTACK}>
 				{$t('title.myTechstack')}
 				<ArrowSmall invert />
 			</a>
