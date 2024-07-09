@@ -12,7 +12,6 @@
 <LinesBackground>
 	<div class="about-me-container">
 		<div class="about-me-picture-container">
-			<ThemeChanger size={54} />
 			<img src="/images/me.jpg" alt={$t('alt.myPicture')} />
 		</div>
 		<div class="about-me-text-container">

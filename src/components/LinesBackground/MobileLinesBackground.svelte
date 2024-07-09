@@ -3,6 +3,8 @@
 	import Github from '$components/icons/Github.svelte';
 	import Linkedin from '$components/icons/Linkedin.svelte';
 	import Mail from '$components/icons/Mail.svelte';
+	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
+	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
 	import { t } from '$lib/i18n/i18n';
 </script>
 
@@ -22,6 +24,10 @@
 				<a href="mailto:gonagutor@gmail.com">
 					<Mail />
 				</a>
+			</div>
+			<div id="site-settings">
+				<ThemeChanger size={42} />
+				<LanguageChanger />
 			</div>
 			<a id="next-page-link" href="/techstack">
 				{$t('title.myTechstack')}
@@ -50,6 +56,12 @@
 	@media (max-width: 1268px) {
 		.mobile-lines-background {
 			display: inherit;
+		}
+
+		@media (max-width: 842px) {
+			#site-settings {
+				display: none !important;
+			}
 		}
 	}
 
@@ -106,6 +118,12 @@
 		padding-block: 1rem;
 		margin-left: -0.1rem;
 		background: var(--background);
+	}
+
+	#site-settings {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
 	}
 
 	#next-page-link {
