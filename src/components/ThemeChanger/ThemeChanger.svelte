@@ -18,11 +18,9 @@
 
 <style>
 	.change-theme-button {
-		display: grid;
 		position: relative;
 		justify-items: center;
 		align-items: center;
-		grid: 1fr;
 
 		margin-left: 0.25rem;
 		z-index: 2;

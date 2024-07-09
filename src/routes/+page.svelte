@@ -65,17 +65,43 @@
 		padding-inline: 7rem;
 	}
 
+	.about-me-picture-container {
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.about-me-picture-container :global(.change-theme-button) {
+		position: absolute;
+		top: 4rem;
+		left: 6rem;
+	}
+
 	@media (max-width: 1268px) {
 		.about-me-container {
 			flex-wrap: wrap;
-			padding-inline: 0;
+			padding-block: 1rem;
+			padding-inline: 2.5rem;
+		}
+
+		.about-me-picture-container :global(.change-theme-button) {
+			position: absolute;
+			top: 2rem;
+			left: 2rem;
+		}
+	}
+
+	@media (max-width: 842px) {
+		.about-me-picture-container :global(.change-theme-button) {
+			display: none;
 		}
 	}
 
 	.about-me-picture-container > img {
 		border-radius: 100%;
 		aspect-ratio: 1;
-		height: 27rem;
+
+		max-width: 27rem;
+		width: calc(100vw - 6rem);
 		object-fit: cover;
 	}
 
