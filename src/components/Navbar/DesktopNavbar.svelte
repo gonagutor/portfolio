@@ -1,16 +1,35 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
 	import { ROUTES } from '$lib/constants';
+
+	export let current;
 </script>
 
 <nav>
 	<h1 class="title">{$t('header')}</h1>
 	<ul class="navigator">
-		<li><a href={ROUTES.ABOUT_ME}>{$t('title.aboutMe')}</a></li>
-		<li><a href={ROUTES.MY_TECHSTACK}>{$t('title.myTechstack')}</a></li>
-		<li><a href={ROUTES.PROJECTS}>{$t('title.projects')}</a></li>
-		<li><a href={ROUTES.EXPERIENCE}>{$t('title.experience')}</a></li>
-		<li><a id="contactMe" href={ROUTES.CONTACT_ME}>{$t('contactMe')}</a></li>
+		<li>
+			<a aria-current={current === ROUTES.ABOUT_ME} href={ROUTES.ABOUT_ME}>{$t('title.aboutMe')}</a>
+		</li>
+		<li>
+			<a aria-current={current === ROUTES.MY_TECHSTACK} href={ROUTES.MY_TECHSTACK}
+				>{$t('title.myTechstack')}</a
+			>
+		</li>
+		<li>
+			<a aria-current={current === ROUTES.PROJECTS} href={ROUTES.PROJECTS}>{$t('title.projects')}</a
+			>
+		</li>
+		<li>
+			<a aria-current={current === ROUTES.EXPERIENCE} href={ROUTES.EXPERIENCE}
+				>{$t('title.experience')}</a
+			>
+		</li>
+		<li>
+			<a aria-current={current === ROUTES.CONTACT_ME} id="contactMe" href={ROUTES.CONTACT_ME}
+				>{$t('contactMe')}</a
+			>
+		</li>
 	</ul>
 </nav>
 
@@ -68,8 +87,15 @@
 		letter-spacing: -2px;
 		font-weight: bold;
 		white-space: nowrap;
-		color: var(--foreground);
 		text-decoration: none;
+
+		color: var(--foreground);
+	}
+
+	.navigator > li > a[aria-current='true'] {
+		padding: 0.75rem;
+		border-radius: 50rem;
+		background: var(--highlight-gradient);
 	}
 
 	#contactMe {

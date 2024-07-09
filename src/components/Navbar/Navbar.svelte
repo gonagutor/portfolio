@@ -1,7 +1,9 @@
 <script lang="ts">
 	import DesktopNavbar from './DesktopNavbar.svelte';
 	import MobileNavbar from './MobileNavbar.svelte';
+
+	export let current;
 </script>
 
-<DesktopNavbar />
-<MobileNavbar />
+<DesktopNavbar {current} />
+<MobileNavbar {current} />

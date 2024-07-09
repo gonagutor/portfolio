@@ -1,7 +1,7 @@
 export const ROUTES = {
 	ABOUT_ME: '/',
+	MY_TECHSTACK: '/techstack',
 	PROJECTS: '/projects',
 	EXPERIENCE: '/experience',
-	MY_TECHSTACK: '/techstack',
 	CONTACT_ME: '/contact'
 };

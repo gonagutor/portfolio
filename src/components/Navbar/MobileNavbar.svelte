@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
 	import { ROUTES } from '$lib/constants';
+	import PositionMarker from '$components/icons/PositionMarker.svelte';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
+
+	export let current;
 </script>
 
 <nav>
@@ -13,12 +16,33 @@
 		</LanguageChanger>
 	</section>
 	<section class="navigator-container">
+		<PositionMarker />
 		<ul class="navigator">
-			<li><a id="contactMe" href={ROUTES.CONTACT_ME}>{$t('contactMe')}</a></li>
-			<li><a href={ROUTES.ABOUT_ME}>{$t('title.aboutMe')}</a></li>
-			<li><a href={ROUTES.MY_TECHSTACK}>{$t('title.myTechstack')}</a></li>
-			<li><a href={ROUTES.PROJECTS}>{$t('title.projects')}</a></li>
-			<li><a href={ROUTES.EXPERIENCE}>{$t('title.experience')}</a></li>
+			<li>
+				<a aria-current={current === ROUTES.CONTACT_ME} id="contactMe" href={ROUTES.CONTACT_ME}>
+					{$t('contactMe')}
+				</a>
+			</li>
+			<li>
+				<a aria-current={current === ROUTES.ABOUT_ME} href={ROUTES.ABOUT_ME}>
+					{$t('title.aboutMe')}
+				</a>
+			</li>
+			<li>
+				<a aria-current={current === ROUTES.MY_TECHSTACK} href={ROUTES.MY_TECHSTACK}>
+					{$t('title.myTechstack')}
+				</a>
+			</li>
+			<li>
+				<a aria-current={current === ROUTES.PROJECTS} href={ROUTES.PROJECTS}>
+					{$t('title.projects')}
+				</a>
+			</li>
+			<li>
+				<a aria-current={current === ROUTES.EXPERIENCE} href={ROUTES.EXPERIENCE}>
+					{$t('title.experience')}
+				</a>
+			</li>
 		</ul>
 	</section>
 </nav>
@@ -56,6 +80,7 @@
 	}
 
 	.navigator-container {
+		position: relative;
 		border-bottom: 1px solid var(--foreground);
 		overflow-x: scroll;
 		overflow-y: hidden;
