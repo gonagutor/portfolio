@@ -1,17 +1,33 @@
 <script lang="ts">
-	import Navbar from '$components/Navbar/Navbar.svelte';
+	import LinesBackground from '$components/LinesBackground/LinesBackground.svelte';
+	import type { TransitionConfig, FlyParams } from 'svelte/transition';
 	import { fly } from 'svelte/transition';
-	import { navigating } from '$app/stores';
+	import { spring } from 'svelte/motion';
+	import { navigating, page } from '$app/stores';
+	import { goto } from '$app/navigation';
+
+	import Navbar from '$components/Navbar/Navbar.svelte';
 	import { ROUTES } from '$lib/constants';
 	import './styles.css';
 
-	export let data;
+	let panTween = spring(0);
+	let yDragStartPos = 0;
+	let xDragStartPos = 0;
+	let lastTime;
+
+	$: yDragPos = 0;
+	$: xDragPos = 0;
+
+	const customFly = (node: Element, options?: FlyParams) => {
+		panTween.set(0, { hard: true });
+		return fly(node, options);
+	};
 
 	interface Transition {
 		condition: (from: string, to: string) => boolean;
-		transition: any;
-		inParams: { x?: number; y?: number; duration?: number; delay?: number };
-		outParams: { x?: number; y?: number; duration?: number; delay?: number };
+		transition: (node: Element, options?: FlyParams) => TransitionConfig;
+		inParams: FlyParams;
+		outParams: FlyParams;
 	}
 
 	let width = typeof window !== 'undefined' ? document.documentElement.clientWidth : 0;
@@ -26,7 +42,7 @@
 
 				return fromIndex < toIndex;
 			},
-			transition: fly,
+			transition: customFly,
 			inParams: { x: width, duration: 400, opacity: 1 },
 			outParams: { x: -width, duration: 400, opacity: 1 }
 		},
@@ -37,7 +53,7 @@
 
 				return fromIndex > toIndex;
 			},
-			transition: fly,
+			transition: customFly,
 			inParams: { x: -width, duration: 400, opacity: 1 },
 			outParams: { x: width, duration: 400, opacity: 1 }
 		}
@@ -49,6 +65,41 @@
 	});
 
 	$: ({ transition, inParams, outParams } = config!);
+
+	const handleDragStart = (e: TouchEvent) => {
+		yDragStartPos = e.changedTouches[0].pageY;
+		xDragStartPos = e.changedTouches[0].pageX;
+
+		lastTime = window.performance.now();
+	};
+
+	const handleDrag = (e: TouchEvent) => {
+		yDragPos = e.changedTouches[0].pageY - yDragStartPos;
+		xDragPos = e.changedTouches[0].pageX - xDragStartPos;
+		let currentPageIndex = routesIndices.indexOf($page?.route.id || '/');
+
+		if (Math.abs(xDragPos) > 10) panTween.set(xDragPos, { hard: true });
+	};
+
+	const handleDragEnd = (e: TouchEvent) => {
+		if (e.cancelable) e.preventDefault();
+
+		if ($panTween >= 100) {
+			const previousPage = routesIndices.indexOf($page?.route.id || '/') - 1;
+			if (!routesIndices[previousPage]) return;
+
+			goto(routesIndices[previousPage]);
+		} else if ($panTween <= -100) {
+			const nextPage = routesIndices.indexOf($page?.route.id || '/') + 1;
+			if (!routesIndices[nextPage]) return;
+
+			goto(routesIndices[nextPage]);
+		}
+
+		$panTween = 0;
+	};
+
+	export let data;
 </script>
 
 <div class="app">
@@ -56,7 +107,17 @@
 
 	<main>
 		{#key data.url}
-			<div in:transition={inParams} out:transition={outParams}>
+			<div
+				on:touchmove|passive={handleDrag}
+				on:touchend={handleDragEnd}
+				on:touchstart|passive={handleDragStart}
+				in:transition={inParams}
+				out:transition={outParams}
+				style="transform: translateX({$page?.route.id === routesIndices[routesIndices.length - 1] ||
+				$page?.route.id === routesIndices[0]
+					? 0
+					: $panTween}px);"
+			>
 				<slot />
 			</div>
 		{/key}

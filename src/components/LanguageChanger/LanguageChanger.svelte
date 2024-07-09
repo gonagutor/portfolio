@@ -9,12 +9,14 @@
 
 <div class="button-container">
 	<button
+		aria-current={$locale == 'es'}
 		class="language-button {$locale == 'es' && 'active'}"
 		on:click={() => onChangeLanguage('es')}
 	>
 		ES
 	</button>
 	<button
+		aria-current={$locale == 'en'}
 		class="language-button {$locale == 'en' && 'active'}"
 		on:click={() => onChangeLanguage('en')}
 	>

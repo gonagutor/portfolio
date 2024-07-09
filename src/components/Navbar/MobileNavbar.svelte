@@ -57,7 +57,7 @@
 	nav {
 		display: none;
 
-		width: calc(100vw - 1.04rem);
+		width: calc(100vw);
 	}
 
 	.title-language-theme {
