@@ -17,34 +17,7 @@
 		<div class="about-me-text-container">
 			<h1 class="about-me-title">{$t('title.aboutMe')}</h1>
 			<p class="about-me-text">
-				¡Hola! Soy Gonzalo
-				<br />
-				<br />
-				Soy un <b>desarrollador Fullstack con 3 años de experiencia</b> transformando ideas en
-				software tangible.
-				<br />
-				<br />
-				He trabajado en proyectos de empresas como <b>Wabi</b> (del Banco Santander), donde me
-				encargué de desarrollos de aplicaciones web y móviles, incluyendo el frontend y el backend.
-				<br />
-				<br />
-				Soy mayormente autodidacta, con un gran dominio de lenguajes como
-				<b>Java, Javascript, Go y Dart.</b>
-				<br />
-				<br />
-				Me apasiona resolver problemas, y estoy familiarizado con metodologías ágiles de desarrollo.
-				<br />
-				<br />
-				Estoy constantemente actualizando mis conocimientos y habilidades ya que siempre tengo algún
-				proyecto personal entre manos que supera lo que se en el momento.
-				<br />
-				<br />
-				¿Parece que encajaría en tu equipo? ¿Tienes algún proyecto en mente?
-				<b>¡No dudes en contactarme!</b>
-				<br />
-				<br />
-				Si todavía necesitas convencerte desliza hacia la derecha o haz click en la flecha para echar
-				un vistazo a mis proyectos
+				{@html $t('content.aboutMe')}
 			</p>
 		</div>
 	</div>

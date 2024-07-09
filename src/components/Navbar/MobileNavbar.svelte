@@ -6,7 +6,7 @@
 
 <nav>
 	<section class="title-language-theme">
-		<h1 class="title">GAT</h1>
+		<h1 class="title">{$t('header')}</h1>
 		<LanguageChanger>
 			<ThemeChanger />
 		</LanguageChanger>

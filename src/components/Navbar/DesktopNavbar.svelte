@@ -1,10 +1,9 @@
 <script lang="ts">
-	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
 	import { t } from '$lib/i18n/i18n';
 </script>
 
 <nav>
-	<h1 class="title">GAT</h1>
+	<h1 class="title">{$t('header')}</h1>
 	<ul class="navigator">
 		<li><a href="/">{$t('title.aboutMe')}</a></li>
 		<li><a href="/techstack">{$t('title.myTechstack')}</a></li>
