@@ -23,7 +23,7 @@
 					<Mail />
 				</a>
 			</div>
-			<a id="next-page-link">
+			<a id="next-page-link" href="/techstack">
 				{$t('title.myTechstack')}
 				<ArrowSmall invert />
 			</a>
