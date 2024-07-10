@@ -41,12 +41,17 @@
 	}
 
 	nav {
+		position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
+
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
 
-		height: 4.625rem;
+		height: calc(4.625rem - 1px);
 		padding-left: 3rem;
 		padding-right: 0.5rem;
 		border-bottom: 1px solid var(--foreground);

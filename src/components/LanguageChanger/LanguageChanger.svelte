@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { locale } from '$lib/i18n/i18n';
+	import { locale, t } from '$lib/i18n/i18n';
 
 	function onChangeLanguage(lang: string) {
 		if ($locale === lang) return;
@@ -10,6 +10,7 @@
 <div class="button-container">
 	<button
 		aria-current={$locale == 'es'}
+		aria-label="Cambiar idioma a español"
 		class="language-button {$locale == 'es' && 'active'}"
 		on:click={() => onChangeLanguage('es')}
 	>
@@ -17,6 +18,7 @@
 	</button>
 	<button
 		aria-current={$locale == 'en'}
+		aria-label="Change language to english"
 		class="language-button {$locale == 'en' && 'active'}"
 		on:click={() => onChangeLanguage('en')}
 	>

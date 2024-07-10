@@ -56,8 +56,10 @@
 
 	nav {
 		display: none;
-
-		width: calc(100vw);
+		position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 	.title-language-theme {
