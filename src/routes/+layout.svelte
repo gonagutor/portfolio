@@ -10,6 +10,8 @@
 	import { ROUTES } from '$lib/constants';
 	import './styles.css';
 
+	const SENSITIVITY = 50;
+
 	let panTween = spring(0);
 	let yDragStartPos = 0;
 	let xDragStartPos = 0;
@@ -84,12 +86,12 @@
 	const handleDragEnd = (e: TouchEvent) => {
 		if (e.cancelable) e.preventDefault();
 
-		if ($panTween >= 100) {
+		if ($panTween >= SENSITIVITY) {
 			const previousPage = routesIndices.indexOf($page?.route.id || '/') - 1;
 			if (!routesIndices[previousPage]) return;
 
 			goto(routesIndices[previousPage]);
-		} else if ($panTween <= -100) {
+		} else if ($panTween <= -SENSITIVITY) {
 			const nextPage = routesIndices.indexOf($page?.route.id || '/') + 1;
 			if (!routesIndices[nextPage]) return;
 

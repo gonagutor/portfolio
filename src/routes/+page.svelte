@@ -51,6 +51,7 @@
 		.about-me-container {
 			flex-wrap: wrap;
 			padding-block: 1rem;
+			margin-bottom: 4rem;
 			padding-inline: 2.5rem;
 		}
 

@@ -138,7 +138,7 @@
 		margin-right: 1rem;
 
 		font-weight: bold;
-		font-size: 24px;
+		font-size: 1.25rem;
 		color: var(--background);
 		background: var(--foreground);
 		border-radius: 5rem;
