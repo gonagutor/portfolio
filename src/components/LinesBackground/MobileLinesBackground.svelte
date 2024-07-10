@@ -58,11 +58,15 @@
 		.mobile-lines-background {
 			display: inherit;
 		}
+	}
 
-		@media (max-width: 842px) {
-			#site-settings {
-				display: none !important;
-			}
+	@media (max-width: 842px) {
+		#site-settings {
+			display: none !important;
+		}
+
+		#next-page-link {
+			font-size: 1rem;
 		}
 	}
 
@@ -138,7 +142,6 @@
 		margin-right: 1rem;
 
 		font-weight: bold;
-		font-size: 1.25rem;
 		color: var(--background);
 		background: var(--foreground);
 		border-radius: 5rem;
