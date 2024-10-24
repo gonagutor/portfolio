@@ -1,11 +1,79 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
-	import { ROUTES } from '$lib/constants';
+	import { MOBILE_ROUTE_TAG_MAPPING } from '$lib/constants';
 	import PositionMarker from '$components/icons/PositionMarker.svelte';
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
+	import { afterUpdate } from 'svelte';
 
-	export let current;
+	export let current: string;
+	let scroller: Element;
+
+	function scrollPageButtonIntoView({
+		element = document.querySelector(`.mobile-nav-item#${MOBILE_ROUTE_TAG_MAPPING[current]}`),
+		fast = false
+	}: {
+		element?: Element | null;
+		fast?: boolean;
+	}) {
+		if (!element) {
+			console.error('Element not found');
+			return;
+		}
+		setTimeout(() => {
+			element.scrollIntoView({
+				behavior: fast ? 'instant' : 'smooth',
+				block: 'nearest',
+				inline: 'center'
+			});
+		}, 50);
+	}
+
+	const findNearest = (elements: HTMLElement[], scrollOffset: number) => {
+		let nearestIndex: number = 0;
+		let minDistance = Infinity;
+		elements.forEach((e, index) => {
+			const elementCenter = e.offsetLeft + e.offsetWidth / 2;
+			const distance = Math.abs(elementCenter - (scrollOffset + scroller.clientWidth / 2));
+			if (distance < minDistance) {
+				minDistance = distance;
+				nearestIndex = index;
+			}
+		});
+		return nearestIndex;
+	};
+
+	function onScrollEnd() {
+		const nearestIndex = findNearest(
+			Array.from(scroller.children) as HTMLElement[],
+			scroller.scrollLeft
+		);
+
+		const route = Object.keys(MOBILE_ROUTE_TAG_MAPPING)[nearestIndex];
+		goto(route);
+		scrollPageButtonIntoView({
+			element: document.querySelector(`.mobile-nav-item#${MOBILE_ROUTE_TAG_MAPPING[route]}`),
+			fast: true
+		});
+	}
+
+	onMount(() => {
+		function handleResize() {
+			if (window.innerWidth >= 842) return;
+			scrollPageButtonIntoView({ fast: true });
+		}
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+		return () => window.removeEventListener('resize', handleResize);
+	});
+
+	afterUpdate(() => {
+		scrollPageButtonIntoView({ fast: false });
+	});
 </script>
 
 <nav>
@@ -17,32 +85,19 @@
 	</section>
 	<section class="navigator-container">
 		<PositionMarker />
-		<ul class="navigator">
-			<li>
-				<a aria-current={current === ROUTES.CONTACT_ME} id="contactMe" href={ROUTES.CONTACT_ME}>
-					{$t('contactMe')}
-				</a>
-			</li>
-			<li>
-				<a aria-current={current === ROUTES.ABOUT_ME} href={ROUTES.ABOUT_ME}>
-					{$t('title.aboutMe')}
-				</a>
-			</li>
-			<li>
-				<a aria-current={current === ROUTES.MY_TECHSTACK} href={ROUTES.MY_TECHSTACK}>
-					{$t('title.myTechstack')}
-				</a>
-			</li>
-			<li>
-				<a aria-current={current === ROUTES.PROJECTS} href={ROUTES.PROJECTS}>
-					{$t('title.projects')}
-				</a>
-			</li>
-			<li>
-				<a aria-current={current === ROUTES.EXPERIENCE} href={ROUTES.EXPERIENCE}>
-					{$t('title.experience')}
-				</a>
-			</li>
+		<ul class="navigator" bind:this={scroller} on:scrollend={onScrollEnd}>
+			{#each Object.keys(MOBILE_ROUTE_TAG_MAPPING) as route}
+				<li>
+					<a
+						aria-current={current === route}
+						class="mobile-nav-item"
+						id={`${MOBILE_ROUTE_TAG_MAPPING[route]}`}
+						href={route}
+					>
+						{$t(`title.${MOBILE_ROUTE_TAG_MAPPING[route]}`)}
+					</a>
+				</li>
+			{/each}
 		</ul>
 	</section>
 </nav>
@@ -84,8 +139,6 @@
 	.navigator-container {
 		position: relative;
 		border-bottom: 1px solid var(--foreground);
-		overflow-x: scroll;
-		overflow-y: hidden;
 	}
 
 	.navigator-container::-webkit-scrollbar {
@@ -101,19 +154,23 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: center;
+		justify-content: start;
 		gap: 0.75rem;
 
 		height: calc(3rem - 1px);
-		width: max-content;
 		margin: 0;
-		padding: 0;
-		padding-inline: 0.5rem;
+		padding-inline: calc(100vw / 2);
 
 		list-style-type: none;
+		scroll-snap-type: x mandatory;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		overflow-x: scroll;
+		overflow-y: hidden;
 	}
 
 	.navigator > li {
+		scroll-snap-align: center;
 		padding: 0;
 		margin: 0;
 	}
@@ -130,7 +187,7 @@
 		text-decoration: none;
 	}
 
-	#contactMe {
+	.mobile-nav-item#contactMe {
 		padding-inline: 1rem;
 		padding-block: 0.438rem;
 

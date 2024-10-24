@@ -33,8 +33,24 @@
 	}
 
 	let width = typeof window !== 'undefined' ? document.documentElement.clientWidth : 0;
-	const routesIndices = Object.values(ROUTES);
 
+	// Listen to window resize events
+	if (typeof window !== 'undefined') {
+		window.addEventListener('resize', () => {
+			width = document.documentElement.clientWidth;
+		});
+	}
+	let routesIndices = Object.values(ROUTES);
+
+	// Change the order of the routes if the screen is too small
+	if (width < 842) {
+		const lastRoute = routesIndices.pop();
+		if (lastRoute) {
+			routesIndices = [lastRoute, ...routesIndices];
+		}
+	}
+
+	// Define fly in and out transitions
 	let transitions: Array<Transition>;
 	$: transitions = [
 		{
@@ -61,13 +77,16 @@
 		}
 	];
 
-	$: config = transitions.find(({ condition }) => {
-		if (!$navigating?.from?.route?.id || !$navigating?.to?.route?.id) return true;
-		return condition($navigating.from.route.id!, $navigating.to.route.id!);
-	});
+	// Find the correct transition or default to right to left
+	$: config =
+		transitions.find(({ condition }) => {
+			if (!$navigating?.from?.route?.id || !$navigating?.to?.route?.id) return true;
+			return condition($navigating.from.route.id!, $navigating.to.route.id!);
+		}) || transitions[0];
 
 	$: ({ transition, inParams, outParams } = config!);
 
+	// Handle touch events
 	const handleDragStart = (e: TouchEvent) => {
 		yDragStartPos = e.changedTouches[0].pageY;
 		xDragStartPos = e.changedTouches[0].pageX;

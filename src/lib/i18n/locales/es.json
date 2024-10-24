@@ -1,7 +1,7 @@
 {
 	"header": "GAT",
-	"contactMe": "Contactame",
 	"title": {
+		"contactMe": "Contactame",
 		"aboutMe": "Sobre mi",
 		"myTechstack": "Mi techstack",
 		"projects": "Proyectos",
