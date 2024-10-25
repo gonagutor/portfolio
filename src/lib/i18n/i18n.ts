@@ -7,9 +7,6 @@ function getLocaleFromCookie() {
 		const match = RegExp(/(^| )locale=([^;]+)/).exec(document.cookie);
 		if (match) return match[2];
 	}
-	if (typeof window !== 'undefined') {
-		return document.documentElement.lang || 'en';
-	}
 	// Default to the user's preferred language if no cookie is found and navigator is available
 	if (typeof navigator !== 'undefined') {
 		return navigator.language.split('-')[0] || 'en';
@@ -24,6 +21,7 @@ export const locales = Object.keys(translations);
 locale.subscribe((value) => {
 	if (typeof document === 'undefined') return;
 	document.cookie = `locale=${value};path=/`;
+	document.documentElement.lang = value;
 });
 
 function translate(locale: string, key: string, vars: any) {
