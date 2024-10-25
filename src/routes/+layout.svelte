@@ -139,7 +139,7 @@
 					? 0
 					: $panTween}px);"
 			>
-				<LinesBackground>
+				<LinesBackground current={data.url}>
 					<slot />
 				</LinesBackground>
 			</div>

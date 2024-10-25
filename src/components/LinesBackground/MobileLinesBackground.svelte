@@ -1,12 +1,32 @@
-<script>
-	import ArrowSmall from '$components/icons/ArrowSmall.svelte';
-	import Github from '$components/icons/Github.svelte';
-	import Linkedin from '$components/icons/Linkedin.svelte';
-	import Mail from '$components/icons/Mail.svelte';
+<script lang="ts">
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
-	import { ROUTES } from '$lib/constants';
-	import { t } from '$lib/i18n/i18n';
+	import { MOBILE_ROUTE_TAG_MAPPING, ROUTE_TAG_MAPPING } from '$lib/constants';
+	import { onMount } from 'svelte';
+	import Socials from './components/Socials.svelte';
+	import NavigatorButton from './components/NavigatorButton.svelte';
+
+	export let current: string;
+
+	let routes = ROUTE_TAG_MAPPING;
+	let routesList = Object.keys(ROUTE_TAG_MAPPING);
+	let previousPage = routesList.indexOf(current) - 1;
+	let nextPage = routesList.indexOf(current) + 1;
+
+	onMount(() => {
+		function handleResize() {
+			if (window.innerWidth >= 842) return;
+			routes = MOBILE_ROUTE_TAG_MAPPING;
+			routesList = Object.keys(MOBILE_ROUTE_TAG_MAPPING);
+			previousPage = routesList.indexOf(current) - 1;
+			nextPage = routesList.indexOf(current) + 1;
+		}
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+		return () => window.removeEventListener('resize', handleResize);
+	});
 </script>
 
 <div class="mobile-lines-background">
@@ -15,25 +35,28 @@
 			<div class="vertical-line" />
 		</div>
 		<div id="bottom-container">
-			<div id="socials-container">
-				<a href="https://github.com/gonagutor">
-					<Github />
-				</a>
-				<a href="https://www.linkedin.com/in/gonzalo-aguado-torres-512115175/">
-					<Linkedin />
-				</a>
-				<a href="mailto:gonagutor@gmail.com">
-					<Mail />
-				</a>
-			</div>
+			{#if previousPage >= 0}
+				<NavigatorButton
+					reverse={true}
+					href={routesList[previousPage]}
+					text={routes[routesList[previousPage]]}
+				/>
+			{:else}
+				<Socials horizontal />
+			{/if}
 			<div id="site-settings">
 				<ThemeChanger size={42} />
 				<LanguageChanger />
 			</div>
-			<a id="next-page-link" href={ROUTES.MY_TECHSTACK}>
-				{$t('title.myTechstack')}
-				<ArrowSmall invert />
-			</a>
+			{#if nextPage < routesList.length}
+				<NavigatorButton
+					reverse={false}
+					href={routesList[nextPage]}
+					text={routes[routesList[nextPage]]}
+				/>
+			{:else}
+				<Socials horizontal />
+			{/if}
 		</div>
 		<div class="vertical-line-container">
 			<div class="vertical-line" />
@@ -43,12 +66,6 @@
 </div>
 
 <style>
-	a {
-		line-height: 1em;
-		display: flex;
-		text-decoration: none;
-	}
-
 	.mobile-lines-background {
 		display: none;
 		position: relative;
@@ -63,10 +80,6 @@
 	@media (max-width: 842px) {
 		#site-settings {
 			display: none !important;
-		}
-
-		#next-page-link {
-			font-size: 1rem;
 		}
 	}
 
@@ -95,6 +108,9 @@
 
 		margin-block: 1.5rem;
 		margin-bottom: 1.5rem;
+		margin-left: -1px;
+		background: var(--background);
+		padding-top: 1.5rem;
 	}
 
 	.vertical-line-container {
@@ -114,36 +130,9 @@
 		height: calc(100% - 1.313rem - 1.5rem);
 	}
 
-	#socials-container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 1rem;
-
-		padding-block: 1rem;
-		margin-left: -0.1rem;
-		background: var(--background);
-	}
-
 	#site-settings {
 		display: flex;
 		flex-direction: row;
 		gap: 1rem;
-	}
-
-	#next-page-link {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: baseline;
-		gap: 0.75rem;
-
-		padding: 0.75rem;
-		margin-right: 1rem;
-
-		font-weight: bold;
-		color: var(--background);
-		background: var(--foreground);
-		border-radius: 5rem;
 	}
 </style>

@@ -1,7 +1,9 @@
 <script lang="ts">
 	import DesktopLinesBackground from './DesktopLinesBackground.svelte';
 	import MobileLinesBackground from './MobileLinesBackground.svelte';
+
+	export let current: string;
 </script>
 
-<DesktopLinesBackground><slot /></DesktopLinesBackground>
-<MobileLinesBackground><slot /></MobileLinesBackground>
+<DesktopLinesBackground {current}><slot /></DesktopLinesBackground>
+<MobileLinesBackground {current}><slot /></MobileLinesBackground>

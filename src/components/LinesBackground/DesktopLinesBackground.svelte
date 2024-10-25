@@ -1,51 +1,49 @@
-<script>
-	import Arrow from '$components/icons/Arrow.svelte';
-	import Github from '$components/icons/Github.svelte';
-	import Linkedin from '$components/icons/Linkedin.svelte';
-	import Mail from '$components/icons/Mail.svelte';
+<script lang="ts">
 	import LanguageChanger from '$components/LanguageChanger/LanguageChanger.svelte';
 	import ThemeChanger from '$components/ThemeChanger/ThemeChanger.svelte';
+	import NavigatorArrow from './components/NavigatorArrow.svelte';
+	import Socials from './components/Socials.svelte';
 	import { ROUTES } from '$lib/constants';
+
+	export let current: string;
+
+	const routes = Object.values(ROUTES);
+	const previousPage = routes.indexOf(current) - 1;
+	const nextPage = routes.indexOf(current) + 1;
 </script>
 
 <div class="desktop-lines-background">
 	<div class="lines">
 		<div class="vertical-line-container" id="left-line">
 			<div class="vertical-line" />
-			<div id="socials-container">
-				<a href="https://github.com/gonagutor">
-					<Github />
-				</a>
-				<a href="https://www.linkedin.com/in/gonzalo-aguado-torres-512115175/">
-					<Linkedin />
-				</a>
-				<a href="mailto:gonagutor@gmail.com">
-					<Mail />
-				</a>
+			<div class="buttons-container">
+				{#if previousPage >= 0}
+					<NavigatorArrow reverse={true} href={routes[previousPage]} />
+				{:else}
+					<Socials />
+				{/if}
 			</div>
-			<div class="vertical-line" />
 		</div>
 		<div id="bottom-line-container">
 			<ThemeChanger />
 			<LanguageChanger />
 			<div id="bottom-line" />
 		</div>
-		<div class="vertical-line-container">
+		<div class="vertical-line-container" id="right-line">
 			<div class="vertical-line" />
-			<a href={ROUTES.MY_TECHSTACK}><Arrow /></a>
-			<div class="vertical-line" />
+			<div class="buttons-container">
+				{#if nextPage < routes.length}
+					<NavigatorArrow href={routes[nextPage]} />
+				{:else}
+					<Socials />
+				{/if}
+			</div>
 		</div>
 	</div>
 	<slot />
 </div>
 
 <style>
-	a {
-		line-height: 1em;
-		display: flex;
-		text-decoration: none;
-	}
-
 	.desktop-lines-background {
 		position: relative;
 	}
@@ -89,16 +87,12 @@
 		background: var(--foreground);
 		margin-right: 3rem;
 	}
-
 	.vertical-line-container {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
-	}
-
-	.vertical-line-container > a {
-		margin-block: 3.75rem;
 	}
 
 	.vertical-line {
@@ -111,11 +105,18 @@
 		height: calc(100% - 1.313rem - 1.5rem);
 	}
 
-	#socials-container {
+	.buttons-container {
 		display: flex;
-		flex-direction: column;
+		position: absolute;
+		justify-content: center;
 		align-items: center;
-		gap: 1rem;
-		padding-block: 2rem;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.vertical-line-container#right-line > .buttons-container {
+		bottom: calc(1.313rem + 1.5rem);
 	}
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/i18n';
-	import { ROUTES, ROUTE_TAG_MAPPING } from '$lib/constants';
+	import { ROUTE_TAG_MAPPING } from '$lib/constants';
 
 	export let current;
 </script>

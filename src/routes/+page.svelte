@@ -8,19 +8,17 @@
 	<meta name="description" content={$t('description.aboutMe')} />
 </svelte:head>
 
-<LinesBackground>
-	<div class="about-me-container">
-		<div class="about-me-picture-container">
-			<img src="/images/me.jpg" alt={$t('alt.myPicture')} />
-		</div>
-		<div class="about-me-text-container">
-			<h1 class="about-me-title">{$t('title.aboutMe')}</h1>
-			<p class="about-me-text">
-				{@html $t('content.aboutMe')}
-			</p>
-		</div>
+<div class="about-me-container">
+	<div class="about-me-picture-container">
+		<img src="/images/me.jpg" alt={$t('alt.myPicture')} />
 	</div>
-</LinesBackground>
+	<div class="about-me-text-container">
+		<h1 class="about-me-title">{$t('title.aboutMe')}</h1>
+		<p class="about-me-text">
+			{@html $t('content.aboutMe')}
+		</p>
+	</div>
+</div>
 
 <style>
 	.about-me-container {
