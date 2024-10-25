@@ -6,7 +6,12 @@
 	export let horizontal: boolean = false;
 </script>
 
-<div style="--flex-direction:{horizontal ? 'row' : 'column'}" id="socials-container">
+<div
+	style="--flex-direction:{horizontal ? 'row' : 'column'}; --margin-right:{horizontal
+		? '1rem'
+		: '0'}; --padding-block:{horizontal ? '0' : '2rem'}"
+	id="socials-container"
+>
 	<a href="https://github.com/gonagutor">
 		<Github />
 	</a>
@@ -25,7 +30,8 @@
 		align-items: center;
 		gap: 1rem;
 
-		margin-right: 1rem;
+		margin-right: var(--margin-right);
+		padding-block: var(--padding-block);
 		background: var(--background);
 	}
 </style>

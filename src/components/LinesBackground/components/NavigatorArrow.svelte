@@ -13,5 +13,6 @@
 		line-height: 1em;
 		display: flex;
 		text-decoration: none;
+		padding-block: 2rem;
 	}
 </style>
