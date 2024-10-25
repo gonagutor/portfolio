@@ -117,6 +117,7 @@
 		right: 0;
 		z-index: 1000;
 		background-color: var(--background);
+		margin-bottom: 1rem;
 	}
 
 	.title-language-theme {

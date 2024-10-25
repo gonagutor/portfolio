@@ -161,6 +161,12 @@
 		box-sizing: border-box;
 	}
 
+	@media (max-width: 842px) {
+		main {
+			margin-top: 8rem;
+		}
+	}
+
 	div {
 		overflow-x: hidden;
 		position: absolute;
