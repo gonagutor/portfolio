@@ -7,4 +7,21 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<p>Contact me</p>
+<div class="contact-container">
+	<p>Contact me</p>
+</div>
+
+<style>
+	.contact-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+
+		min-height: calc(100vh - 4.688rem - 3rem);
+		min-height: calc(100dvh - 4.688rem - 3rem);
+		padding-inline: 7rem;
+	}
+</style>

@@ -139,7 +139,9 @@
 					? 0
 					: $panTween}px);"
 			>
-				<slot />
+				<LinesBackground>
+					<slot />
+				</LinesBackground>
 			</div>
 		{/key}
 	</main>
