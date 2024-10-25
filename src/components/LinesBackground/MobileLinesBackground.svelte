@@ -61,6 +61,10 @@
 	}
 
 	@media (max-width: 842px) {
+		.mobile-lines-background {
+			margin-top: 8rem;
+		}
+
 		#site-settings {
 			display: none !important;
 		}
