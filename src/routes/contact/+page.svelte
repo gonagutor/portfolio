@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>gonagutor - {$t('title.contactMe')}</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content={$t('description.contactMe')} />
 </svelte:head>
 
 <div class="contact-container">

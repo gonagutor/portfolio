@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>gonagutor - {$t('title.experience')}</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content={$t('description.experience')} />
 </svelte:head>
 
 <div class="experience-container">
