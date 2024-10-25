@@ -2,8 +2,29 @@ import { derived, writable } from 'svelte/store';
 import translations from './translations';
 import _ from 'lodash';
 
-export const locale = writable('en');
+function getLocaleFromCookie() {
+	if (typeof document !== 'undefined') {
+		const match = RegExp(/(^| )locale=([^;]+)/).exec(document.cookie);
+		if (match) return match[2];
+	}
+	if (typeof window !== 'undefined') {
+		return document.documentElement.lang || 'en';
+	}
+	// Default to the user's preferred language if no cookie is found and navigator is available
+	if (typeof navigator !== 'undefined') {
+		return navigator.language.split('-')[0] || 'en';
+	}
+	// Fallback to 'en' if navigator is not available (e.g., on the server)
+	return 'en';
+}
+
+export const locale = writable(getLocaleFromCookie() || 'en');
 export const locales = Object.keys(translations);
+
+locale.subscribe((value) => {
+	if (typeof document === 'undefined') return;
+	document.cookie = `locale=${value};path=/`;
+});
 
 function translate(locale: string, key: string, vars: any) {
 	// Let's throw some errors if we're trying to use keys/locales that don't exist.
