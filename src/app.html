@@ -11,6 +11,15 @@
 		/>
 		<link />
 		<meta name="viewport" content="width=device-width" />
+		<script>
+			(function () {
+				const DATA_THEME_KEY = 'data-theme';
+				const theme =
+					localStorage.getItem(DATA_THEME_KEY) ||
+					(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				document.documentElement.setAttribute(DATA_THEME_KEY, theme);
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

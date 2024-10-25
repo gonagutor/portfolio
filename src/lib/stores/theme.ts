@@ -3,14 +3,19 @@ import { Writable, writable } from 'svelte/store';
 
 const DATA_THEME_KEY = 'data-theme';
 
-export type Theme = 'dark' | 'light';
+export const THEMES = {
+	DARK: 'dark',
+	LIGHT: 'light'
+} as const;
+
+export type Theme = (typeof THEMES)[keyof typeof THEMES];
 
 export function createThemeStore() {
-	const themeStore: Writable<Theme> = writable('light');
+	const themeStore: Writable<Theme> = writable(THEMES.LIGHT);
 
 	const toggleTheme = () =>
 		themeStore.update((oldTheme) => {
-			let newTheme: Theme = oldTheme === 'dark' ? 'light' : 'dark';
+			let newTheme: Theme = oldTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK;
 			document.documentElement.setAttribute(DATA_THEME_KEY, newTheme);
 			localStorage.setItem(DATA_THEME_KEY, newTheme);
 
@@ -27,12 +32,13 @@ export function createThemeStore() {
 
 	onMount(() => {
 		if (
-			localStorage.getItem(DATA_THEME_KEY) === 'dark' ||
-			window.matchMedia('(prefers-color-scheme: dark)').matches
+			localStorage.getItem(DATA_THEME_KEY) === THEMES.DARK ||
+			(window.matchMedia('(prefers-color-scheme: dark)').matches &&
+				!localStorage.getItem(DATA_THEME_KEY))
 		)
-			return changeTheme('dark');
+			return changeTheme(THEMES.DARK);
 
-		return changeTheme('light');
+		return changeTheme(THEMES.LIGHT);
 	});
 
 	return {
