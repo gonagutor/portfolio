@@ -10,7 +10,7 @@
 	import { ROUTES } from '$lib/constants';
 	import './styles.css';
 
-	const SENSITIVITY = 50;
+	const SENSITIVITY = 100;
 
 	let panTween = spring(0);
 	let yDragStartPos = 0;
@@ -99,7 +99,7 @@
 		xDragPos = e.changedTouches[0].pageX - xDragStartPos;
 		let currentPageIndex = routesIndices.indexOf($page?.route.id || '/');
 
-		if (Math.abs(xDragPos) > 10) panTween.set(xDragPos, { hard: true });
+		if (Math.abs(xDragPos) > SENSITIVITY) panTween.set(xDragPos, { hard: true });
 	};
 
 	const handleDragEnd = (e: TouchEvent) => {

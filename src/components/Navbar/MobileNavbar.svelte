@@ -28,7 +28,7 @@
 				block: 'nearest',
 				inline: 'center'
 			});
-		}, 50);
+		}, 10);
 	}
 
 	const findNearest = (elements: HTMLElement[], scrollOffset: number) => {
