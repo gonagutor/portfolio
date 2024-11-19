@@ -2,6 +2,7 @@ interface Experience {
 	company: string;
 	position: Record<string, string>;
 	image: string;
+	imageNeedsInvert?: boolean;
 	startDate: string;
 	endDate: string | null;
 	description: Record<string, string>;
@@ -11,6 +12,7 @@ interface Experience {
 interface Project {
 	name: string;
 	image: string;
+	imageNeedsInvert?: boolean;
 	description: Record<string, string>;
 	technologies: string[];
 }

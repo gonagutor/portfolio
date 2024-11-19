@@ -91,7 +91,8 @@
 	},
 	"objc": {
 		"name": "Objective-C",
-		"image": "/images/techstack/objc.svg"
+		"image": "/images/techstack/objc.svg",
+		"isTooDark": true
 	},
 	"kotlin": {
 		"name": "Kotlin",

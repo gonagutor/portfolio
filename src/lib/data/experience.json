@@ -6,6 +6,7 @@
 			"es": "Desarrollador Fullstack"
 		},
 		"image": "/images/company/softtek/softtek.svg",
+		"imageNeedsInvert": true,
 		"startDate": "2021-11-15",
 		"endDate": null,
 		"description": {

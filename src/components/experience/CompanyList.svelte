@@ -3,15 +3,20 @@
 	import TechnologiesList from '$components/common/TechnologiesList.svelte';
 	import experience from '$lib/data/experience.json';
 	import type { Experience } from '$lib/types/experience';
+	import { themeStore, THEMES } from '$lib/stores/theme';
 
 	const typedExperience: Experience[] = experience;
 </script>
 
 <ul class="company-list">
-	{#each typedExperience as { image, company, startDate, endDate, position, description, projects }}
+	{#each typedExperience as { image, company, startDate, endDate, position, description, projects, imageNeedsInvert }}
 		<li class="company-item">
 			<section class="company-info">
-				<img src={image} alt={company} />
+				<img
+					style={$themeStore === THEMES.DARK && imageNeedsInvert ? 'filter: invert();' : ''}
+					src={image}
+					alt={company}
+				/>
 				<div>
 					<h2>{company} - {position[$locale]}</h2>
 					<h3>{startDate} - {endDate || $t('content.now')}</h3>
@@ -19,9 +24,13 @@
 			</section>
 			<p class="company-description">{description[$locale]}</p>
 			<ul class="company-project-list">
-				{#each projects as { name, image, description, technologies }}
+				{#each projects as { name, image, description, technologies, imageNeedsInvert }}
 					<li class="company-project-item">
-						<img src={image} alt={name} />
+						<img
+							style={$themeStore === THEMES.DARK && imageNeedsInvert ? 'filter: invert();' : ''}
+							src={image}
+							alt={name}
+						/>
 						<div>
 							<h2>{name}</h2>
 							<p>{@html description[$locale]}</p>
