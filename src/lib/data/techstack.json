@@ -238,7 +238,7 @@
 		]
 	},
 	{
-		"title": { "es": "Databases", "en": "Bases de datos" },
+		"title": { "es": "Bases de datos", "en": "Databases" },
 		"description": {
 			"es": "Gestión de bases de datos relacionales y no relacionales.",
 			"en": "Management of relational and non-relational databases."
