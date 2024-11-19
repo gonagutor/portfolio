@@ -1,12 +1,12 @@
 <script lang="ts">
-	import LinesBackground from '$components/LinesBackground/LinesBackground.svelte';
 	import type { TransitionConfig, FlyParams } from 'svelte/transition';
 	import { fly } from 'svelte/transition';
 	import { spring } from 'svelte/motion';
 	import { navigating, page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
-	import Navbar from '$components/Navbar/Navbar.svelte';
+	import LinesBackground from '$components/common/LinesBackground/LinesBackground.svelte';
+	import Navbar from '$components/common/Navbar/Navbar.svelte';
 	import { ROUTES } from '$lib/constants';
 	import './styles.css';
 
@@ -161,6 +161,7 @@
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
+		z-index: 999;
 	}
 
 	@media (max-width: 842px) {

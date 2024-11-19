@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LinesBackground from '$components/LinesBackground/LinesBackground.svelte';
 	import { t } from '$lib/i18n/i18n';
 </script>
 
