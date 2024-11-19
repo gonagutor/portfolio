@@ -1,0 +1,59 @@
+[
+	{
+		"company": "Softtek",
+		"position": {
+			"en": "Fullstack Developer",
+			"es": "Desarrollador Fullstack"
+		},
+		"image": "/images/company/softtek/softtek.svg",
+		"startDate": "2021-11-15",
+		"endDate": null,
+		"description": {
+			"en": "I worked on several distinct projects for a financial institution, primarily as a Fullstack Developer. Initially, I integrated ElectronicID’s (Signicat) native library into a React Native app, later migrating it to a Capacitor-based solution for a unified web and mobile codebase. To retain critical functionality, I built native modules in Swift and Java for libraries like Branch and Stripe. Additionally, I led platform-wide initiatives, including a full app redesign, multi-tenancy support, and a new coupon system, using Fastify and GraphQL. I focused on comprehensive testing (Jest, Mocha, and custom libraries), legacy code optimization, and security improvements. In another project, I developed a VanillaJS-based banking security frontend library with wrappers for React, Angular, and Darwin.",
+			"es": "Trabajé en varios proyectos distintos para una institución financiera, principalmente como desarrollador Fullstack. Inicialmente, integré la biblioteca nativa de ElectronicID (Signicat) en una aplicación React Native, y más tarde la migré a una solución basada en Capacitor para una base de código web y móvil unificada. Para mantener la funcionalidad crítica, construí módulos nativos en Swift y Java para bibliotecas como Branch y Stripe. Además, dirigí iniciativas en toda la plataforma, incluyendo un rediseño completo de la aplicación, soporte multi-tenancy, y un nuevo sistema de cupones, utilizando Fastify y GraphQL. Me centré en pruebas integrales (Jest, Mocha y bibliotecas personalizadas), optimización de código heredado y mejoras de seguridad. En otro proyecto, desarrollé una biblioteca de frontend de seguridad bancaria basada en VanillaJS con wrappers para React, Angular y Darwin."
+		},
+		"projects": [
+			{
+				"name": "Wabi (Santander Consumer Finance)",
+				"image": "/images/company/softtek/wabi.svg",
+				"description": {
+					"en": "<p>I contributed to the implementation of a React Native library by integrating ElectronicID's (Signicat) native library.<p/>Subsequently, I led the transition from a React Native app to a Capacitor-based solution, enabling a unified codebase for both web and mobile platforms with minimal adjustments. To preserve and extend key functionalities despite the introduction of the intermediate layer, I developed custom native modules in Swift and Java for libraries such as Branch, OneTrust, Stripe, and ElectronicID.<p>I also oversaw the app’s release process across app stores, ensuring a seamless upgrade experience for users.<p/>In addition to mobile-focused projects, I frequently worked as a full-stack developer. The platform architecture utilized multiple Fastify Node.js services and a GraphQL API to connect with the React frontend.<p>My contributions included a comprehensive redesign of our applications and participation in transforming the platform for multi-tenancy. This overhaul allowed new tenants to customize their themes and branding effortlessly. I implemented a coupon system for referrals and discounts and led a revamp of user data storage, enabling tenants in the B2B business model to tailor data requirements based on their specific needs. My work spanned both B2B and B2C development projects.<p/>All developments included thorough testing, initially using Jest for frontend and Mocha for backend tests, followed by transitioning to a custom-built testing library with features like code coverage and service mocking, reminiscent of Mocha.<p>Additionally, I focused on modernizing and optimizing legacy code as the company scaled. My work included addressing security vulnerabilities on the Android platform and within the backend using tools such as BurpSuite.<p/>",
+					"es": "<p>Contribuí a la implementación de una librería React Native integrando la librería nativa de ElectronicID (Signicat).</p><p>Posteriormente, dirigí la transición de una app React Native a una solución basada en Capacitor, permitiendo una base de código unificada tanto para plataformas web como móviles con ajustes mínimos. Para preservar y ampliar las funcionalidades clave a pesar de la introducción de la capa intermedia, desarrollé módulos nativos personalizados en Swift y Java para bibliotecas como Branch, OneTrust, Stripe y ElectronicID.</p><p>También supervisé el proceso de lanzamiento de la aplicación a través de las tiendas de aplicaciones, garantizando una experiencia de actualización sin problemas para los usuarios.</p><p>Además de los proyectos centrados en móviles, trabajé con frecuencia como desarrollador full-stack. La arquitectura de la plataforma utilizaba múltiples servicios Fastify Node.js y una API GraphQL para conectar con el frontend React.</p><p>Mis contribuciones incluyeron un rediseño integral de nuestras aplicaciones y la participación en la transformación de la plataforma para multi-arrendamiento. Esta revisión permitió a los nuevos inquilinos personalizar sus temas y marca sin esfuerzo. Implementé un sistema de cupones para referencias y descuentos y dirigí una renovación del almacenamiento de datos de usuario, permitiendo a los inquilinos del modelo de negocio B2B adaptar los requisitos de datos en función de sus necesidades específicas. Mi trabajo abarcó proyectos de desarrollo B2B y B2C.</p><p>Todos los desarrollos incluyeron pruebas exhaustivas, inicialmente utilizando Jest para el frontend y Mocha para las pruebas de backend, seguido de la transición a una biblioteca de pruebas personalizada con características como la cobertura de código y la imitación de servicios, que recuerda a Mocha.</p><p>Además, me centré en modernizar y optimizar el código heredado a medida que la empresa crecía. Mi trabajo incluyó abordar las vulnerabilidades de seguridad en la plataforma Android y dentro del backend utilizando herramientas como BurpSuite.</p>"
+				},
+				"technologies": [
+					"react",
+					"redux",
+					"javascript",
+					"html",
+					"css",
+					"fastify",
+					"graphql",
+					"mongodb",
+					"postgresql",
+					"elastic",
+					"amazons3",
+					"redis",
+					"docker",
+					"kubernetes",
+					"nodejs",
+					"java",
+					"objc",
+					"kotlin",
+					"swift",
+					"capacitor",
+					"reactnative",
+					"stripe"
+				]
+			},
+			{
+				"name": "Gluon Security (Santander Global Tech)",
+				"image": "/images/company/softtek/gluon.svg",
+				"description": {
+					"en": "I worked on the development of a banking security frontend library. <br/><br/>This library handled login, session keep-alive and operation signing. This was implemented using VanillaJS and wrappers with different state handling were implemented for React, Angular and Darwin",
+					"es": "Trabajé en el desarrollo de una librería frontend de segurídad bancaria <br/><br/>Esta librería se ocupaba de inicio de sesión, keep-alive y firma de operaciones. Esto fue implementado usando VanillaJS y se implementaron wrappers con diferentes manejos de estado para React, Angular"
+				},
+				"technologies": ["typescript", "javascript", "react", "angular", "html", "css"]
+			}
+		]
+	}
+]

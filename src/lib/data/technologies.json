@@ -1,0 +1,298 @@
+{
+	"html": {
+		"name": "HTML",
+		"image": "/images/techstack/html.svg"
+	},
+	"css": {
+		"name": "CSS",
+		"image": "/images/techstack/css.svg"
+	},
+	"sass": {
+		"name": "SASS",
+		"image": "/images/techstack/sass.svg"
+	},
+	"stripe": {
+		"name": "Stripe",
+		"image": "/images/techstack/stripe.svg"
+	},
+	"javascript": {
+		"name": "JavaScript",
+		"image": "/images/techstack/javascript.svg"
+	},
+	"typescript": {
+		"name": "TypeScript",
+		"image": "/images/techstack/typescript.svg"
+	},
+	"dart": {
+		"name": "Dart",
+		"image": "/images/techstack/dart.svg"
+	},
+	"react": {
+		"name": "React",
+		"image": "/images/techstack/react.svg"
+	},
+	"angular": {
+		"name": "Angular",
+		"image": "/images/techstack/angular.svg"
+	},
+	"svelte": {
+		"name": "Svelte",
+		"image": "/images/techstack/svelte.svg"
+	},
+	"nextjs": {
+		"name": "Next.js",
+		"image": "/images/techstack/nextjs.svg",
+		"isTooDark": true
+	},
+	"gatsby": {
+		"name": "Gatsby",
+		"image": "/images/techstack/gatsby.svg"
+	},
+	"flutter": {
+		"name": "Flutter",
+		"image": "/images/techstack/flutter.svg"
+	},
+	"redux": {
+		"name": "Redux",
+		"image": "/images/techstack/redux.svg"
+	},
+	"apollo": {
+		"name": "Apollo Client",
+		"image": "/images/techstack/apollo.svg",
+		"isTooDark": true
+	},
+	"jest": {
+		"name": "Jest",
+		"image": "/images/techstack/jest.svg"
+	},
+	"testinglibrary": {
+		"name": "Testing Library",
+		"image": "/images/techstack/testinglibrary.svg"
+	},
+	"storybook": {
+		"name": "Storybook",
+		"image": "/images/techstack/storybook.svg"
+	},
+	"tailwindcss": {
+		"name": "Tailwind CSS",
+		"image": "/images/techstack/tailwindcss.svg"
+	},
+	"materialui": {
+		"name": "Material UI",
+		"image": "/images/techstack/materialui.svg"
+	},
+	"bootstrap": {
+		"name": "Bootstrap",
+		"image": "/images/techstack/bootstrap.svg"
+	},
+	"swift": {
+		"name": "Swift",
+		"image": "/images/techstack/swift.svg"
+	},
+	"objc": {
+		"name": "Objective-C",
+		"image": "/images/techstack/objc.svg"
+	},
+	"kotlin": {
+		"name": "Kotlin",
+		"image": "/images/techstack/kotlin.svg"
+	},
+	"java": {
+		"name": "Java",
+		"image": "/images/techstack/java.svg"
+	},
+	"reactnative": {
+		"name": "React Native",
+		"image": "/images/techstack/reactnative.svg"
+	},
+	"ionic": {
+		"name": "Ionic",
+		"image": "/images/techstack/ionic.svg"
+	},
+	"capacitor": {
+		"name": "Capacitor",
+		"image": "/images/techstack/capacitor.svg"
+	},
+	"jetpackcompose": {
+		"name": "Jetpack Compose",
+		"image": "/images/techstack/jetpackcompose.svg"
+	},
+	"nodejs": {
+		"name": "Node.js",
+		"image": "/images/techstack/nodejs.svg"
+	},
+	"golang": {
+		"name": "Go Lang",
+		"image": "/images/techstack/golang.svg"
+	},
+	"python": {
+		"name": "Python",
+		"image": "/images/techstack/python.svg"
+	},
+	"express": {
+		"name": "Express",
+		"image": "/images/techstack/express.svg",
+		"isTooDark": true
+	},
+	"graphql": {
+		"name": "GraphQL",
+		"image": "/images/techstack/graphql.svg"
+	},
+	"fastify": {
+		"name": "Fastify",
+		"image": "/images/techstack/fastify.svg",
+		"isTooDark": true
+	},
+	"socketio": {
+		"name": "Socket.io",
+		"image": "/images/techstack/socketio.svg"
+	},
+	"fiber": {
+		"name": "Fiber",
+		"image": "/images/techstack/fiber.svg",
+		"isTooDark": true
+	},
+	"gin": {
+		"name": "Gin",
+		"image": "/images/techstack/gin.svg"
+	},
+	"django": {
+		"name": "Django",
+		"image": "/images/techstack/django.svg"
+	},
+	"flask": {
+		"name": "Flask",
+		"image": "/images/techstack/flask.svg"
+	},
+	"spring": {
+		"name": "Spring Boot",
+		"image": "/images/techstack/spring.svg"
+	},
+	"mysql": {
+		"name": "MySQL",
+		"image": "/images/techstack/mysql.svg",
+		"isTooDark": true
+	},
+	"postgresql": {
+		"name": "PostgreSQL",
+		"image": "/images/techstack/postgresql.svg"
+	},
+	"sqlite": {
+		"name": "SQLite",
+		"image": "/images/techstack/sqlite.svg"
+	},
+	"mongodb": {
+		"name": "MongoDB",
+		"image": "/images/techstack/mongodb.svg"
+	},
+	"firebase": {
+		"name": "Firebase",
+		"image": "/images/techstack/firebase.svg"
+	},
+	"redis": {
+		"name": "Redis",
+		"image": "/images/techstack/redis.svg"
+	},
+	"supabase": {
+		"name": "Supabase",
+		"image": "/images/techstack/supabase.svg"
+	},
+	"amazons3": {
+		"name": "Amazon S3",
+		"image": "/images/techstack/amazons3.svg"
+	},
+	"elastic": {
+		"name": "Elasticsearch",
+		"image": "/images/techstack/elastic.svg"
+	},
+	"kubernetes": {
+		"name": "Kubernetes",
+		"image": "/images/techstack/kubernetes.svg"
+	},
+	"aws": {
+		"name": "AWS",
+		"image": "/images/techstack/aws.svg"
+	},
+	"netlify": {
+		"name": "Netlify",
+		"image": "/images/techstack/netlify.svg"
+	},
+	"vercel": {
+		"name": "Vercel",
+		"image": "/images/techstack/vercel.svg",
+		"isTooDark": true
+	},
+	"googleplay": {
+		"name": "Google Play Console",
+		"image": "/images/techstack/googleplay.svg"
+	},
+	"appstore": {
+		"name": "App Store Connect",
+		"image": "/images/techstack/appstore.svg",
+		"isTooDark": true
+	},
+	"fastlane": {
+		"name": "Fastlane",
+		"image": "/images/techstack/fastlane.svg"
+	},
+	"codemagic": {
+		"name": "Codemagic",
+		"image": "/images/techstack/codemagic.svg",
+		"isTooDark": true
+	},
+	"testflight": {
+		"name": "TestFlight",
+		"image": "/images/techstack/testflight.svg",
+		"isTooDark": true
+	},
+	"figma": {
+		"name": "Figma",
+		"image": "/images/techstack/figma.svg"
+	},
+	"git": {
+		"name": "Git",
+		"image": "/images/techstack/git.svg"
+	},
+	"github": {
+		"name": "GitHub",
+		"image": "/images/techstack/github.svg",
+		"isTooDark": true
+	},
+	"jira": {
+		"name": "Jira",
+		"image": "/images/techstack/jira.svg"
+	},
+	"confluence": {
+		"name": "Confluence",
+		"image": "/images/techstack/confluence.svg"
+	},
+	"postman": {
+		"name": "Postman",
+		"image": "/images/techstack/postman.svg"
+	},
+	"docker": {
+		"name": "Docker",
+		"image": "/images/techstack/docker.svg"
+	},
+	"xcode": {
+		"name": "Xcode",
+		"image": "/images/techstack/xcode.svg"
+	},
+	"androidstudio": {
+		"name": "Android Studio",
+		"image": "/images/techstack/androidstudio.svg"
+	},
+	"vscode": {
+		"name": "VSCode",
+		"image": "/images/techstack/vscode.svg"
+	},
+	"godot": {
+		"name": "Godot",
+		"image": "/images/techstack/godot.svg"
+	},
+	"unity": {
+		"name": "Unity",
+		"image": "/images/techstack/unity.svg",
+		"isTooDark": true
+	}
+}

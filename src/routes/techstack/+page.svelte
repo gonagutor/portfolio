@@ -15,7 +15,7 @@
 
 <div class="my-techstack-container">
 	<div class="title-section">
-		<h1 style="font-family: var(--font-display);">{$t('title.myTechstack')}</h1>
+		<h1>{$t('title.myTechstack')}</h1>
 		<p>{$t('description.myTechstack')}</p>
 	</div>
 	<div class="tech-grid">
@@ -48,6 +48,10 @@
 		width: 100%;
 	}
 
+	.title-section > h1 {
+		font-family: var(--font-display);
+	}
+
 	.tech-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -59,6 +63,7 @@
 	@media (max-width: 1268px) {
 		.my-techstack-container {
 			padding-inline: 2.5rem;
+			margin-inline: 0;
 		}
 
 		.tech-grid {
@@ -68,6 +73,11 @@
 	}
 
 	@media (max-width: 842px) {
+		.my-techstack-container {
+			padding-inline: 2.5rem;
+			margin-inline: 0;
+		}
+
 		.title-section {
 			flex-direction: column;
 			gap: 0;

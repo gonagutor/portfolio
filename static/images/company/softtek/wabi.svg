@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="1336"
+   height="242.66667"
+   viewBox="0 0 1336 242.66667"
+   sodipodi:docname="Wabi_Logo_Indigo_RGB.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,182 H 1002 V 0 H 0 Z"
+         id="path14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="Wabi_Logo_Indigo_RGB"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,242.66667)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="translate(829.9113,75.3046)">
+          <path
+             d="m 0,0 c 15.01,0 25.071,-2.503 30.179,-7.508 3.094,-2.935 4.644,-6.904 4.644,-11.907 0,-5.526 -1.008,-9.493 -3.018,-11.909 -5.263,-6.562 -16.25,-9.836 -32.966,-9.836 H -119.335 V 0 Z m -119.335,72.72 h 107.292 c 11.431,0 19.308,-2.136 23.634,-6.409 3.861,-3.92 5.794,-8.372 5.794,-13.356 0,-6.409 -1.391,-11.128 -4.171,-14.154 C 9.658,34.884 1.86,32.926 -10.189,32.926 H -119.335 Z M 2.68,-74.104 c 31.495,0 52.469,6.143 62.919,18.437 6.759,7.987 10.14,19.051 10.14,33.188 0,13.829 -4.766,23.197 -11.522,30.884 -5.45,6.202 -14.12,12.354 -28.593,14.767 8.411,4.021 13.663,8.525 16.973,13.611 4.528,6.957 6.549,13.183 6.549,23.939 0,12.136 -3.843,22.047 -11.524,29.731 -8.988,8.726 -22.665,13.713 -40.929,15.042 H -158.818 V -74.104 Z"
+             style="fill:#3559f7;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+        <path
+           d="M 960.61,1.201 H 1001 v 179.598 h -40.39 z"
+           style="fill:#3559f7;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path22" />
+        <g
+           id="g24"
+           transform="translate(486.8192,150.1808)">
+          <path
+             d="m 0,0 47.945,-74.988 h -98 z M 25.76,30.619 H -25.474 L -146.475,-148.98 h 46.219 l 27.461,40.986 H 69.753 l 26.303,-40.986 h 45.633 z"
+             style="fill:#3559f7;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path26" />
+        </g>
+        <g
+           id="g28"
+           transform="translate(165.0151,92.4027)">
+          <path
+             d="m 0,0 c -40.847,0 -85.254,-27.86 -85.254,-91.119 h -38.333 l -40.428,179.515 h 42.941 c 0,0 6.913,-33.305 10.683,-52.577 3.98,-19.271 10.055,-51.11 10.055,-51.11 0,0 26.812,53.833 100.127,53.833 73.524,0 100.126,-53.833 100.126,-53.833 0,0 6.075,31.839 10.055,51.11 3.77,19.272 10.683,52.577 10.683,52.577 h 42.941 L 123.168,-91.119 H 84.835 C 84.835,-27.86 40.847,0 0,0"
+             style="fill:#3559f7;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path30" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

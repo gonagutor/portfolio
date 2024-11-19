@@ -8,99 +8,23 @@
 		"categories": [
 			{
 				"category": { "es": "Lenguajes", "en": "Languages" },
-				"items": [
-					{
-						"name": "HTML",
-						"image": "/images/techstack/html.svg"
-					},
-					{
-						"name": "CSS",
-						"image": "/images/techstack/css.svg"
-					},
-					{
-						"name": "SASS",
-						"image": "/images/techstack/sass.svg"
-					},
-					{
-						"name": "JavaScript",
-						"image": "/images/techstack/javascript.svg"
-					},
-					{
-						"name": "TypeScript",
-						"image": "/images/techstack/typescript.svg"
-					},
-					{
-						"name": "Dart",
-						"image": "/images/techstack/dart.svg"
-					}
-				]
+				"items": ["html", "css", "sass", "javascript", "typescript", "dart"]
 			},
 			{
 				"category": { "es": "Frameworks", "en": "Frameworks" },
-				"items": [
-					{
-						"name": "React",
-						"image": "/images/techstack/react.svg"
-					},
-					{
-						"name": "Angular",
-						"image": "/images/techstack/angular.svg"
-					},
-					{
-						"name": "Svelte",
-						"image": "/images/techstack/svelte.svg"
-					},
-					{
-						"name": "Next.js",
-						"image": "/images/techstack/nextjs.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "Gatsby",
-						"image": "/images/techstack/gatsby.svg"
-					},
-					{
-						"name": "Flutter",
-						"image": "/images/techstack/flutter.svg"
-					}
-				]
+				"items": ["react", "angular", "svelte", "nextjs", "gatsby", "flutter"]
 			},
 			{
 				"category": { "es": "Librerías", "en": "Libraries" },
 				"items": [
-					{
-						"name": "Redux",
-						"image": "/images/techstack/redux.svg"
-					},
-					{
-						"name": "Apollo Client",
-						"image": "/images/techstack/apollo.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "Jest",
-						"image": "/images/techstack/jest.svg"
-					},
-					{
-						"name": "Testing Library",
-						"image": "/images/techstack/testinglibrary.svg"
-					},
-					{
-						"name": "Storybook",
-						"image": "/images/techstack/storybook.svg"
-					},
-					{
-						"name": "Tailwind CSS",
-						"image": "/images/techstack/tailwindcss.svg"
-					},
-					{
-						"name": "Material UI",
-						"image": "/images/techstack/materialui.svg"
-					},
-					{
-						"name": "Bootstrap",
-						"image": "/images/techstack/bootstrap.svg"
-					}
+					"redux",
+					"apollo",
+					"jest",
+					"testinglibrary",
+					"storybook",
+					"tailwindcss",
+					"materialui",
+					"bootstrap"
 				]
 			}
 		]
@@ -114,53 +38,11 @@
 		"categories": [
 			{
 				"category": { "es": "Lenguajes", "en": "Languages" },
-				"items": [
-					{
-						"name": "Dart",
-						"image": "/images/techstack/dart.svg"
-					},
-					{
-						"name": "Swift",
-						"image": "/images/techstack/swift.svg"
-					},
-					{
-						"name": "Objective-C",
-						"image": "/images/techstack/objc.svg"
-					},
-					{
-						"name": "Kotlin",
-						"image": "/images/techstack/kotlin.svg"
-					},
-					{
-						"name": "Java",
-						"image": "/images/techstack/java.svg"
-					}
-				]
+				"items": ["dart", "swift", "objc", "kotlin", "java"]
 			},
 			{
 				"category": { "es": "Frameworks", "en": "Frameworks" },
-				"items": [
-					{
-						"name": "React Native",
-						"image": "/images/techstack/reactnative.svg"
-					},
-					{
-						"name": "Flutter",
-						"image": "/images/techstack/flutter.svg"
-					},
-					{
-						"name": "Ionic",
-						"image": "/images/techstack/ionic.svg"
-					},
-					{
-						"name": "Capacitor",
-						"image": "/images/techstack/capacitor.svg"
-					},
-					{
-						"name": "Jetpack Compose",
-						"image": "/images/techstack/jetpackcompose.svg"
-					}
-				]
+				"items": ["reactnative", "flutter", "ionic", "capacitor", "jetpackcompose"]
 			}
 		]
 	},
@@ -173,71 +55,20 @@
 		"categories": [
 			{
 				"category": { "es": "Lenguajes", "en": "Languages" },
-				"items": [
-					{
-						"name": "Node.js",
-						"image": "/images/techstack/nodejs.svg"
-					},
-					{
-						"name": "Go Lang",
-						"image": "/images/techstack/golang.svg"
-					},
-					{
-						"name": "Python",
-						"image": "/images/techstack/python.svg"
-					},
-					{
-						"name": "Java",
-						"image": "/images/techstack/java.svg"
-					},
-					{
-						"name": "Kotlin",
-						"image": "/images/techstack/kotlin.svg"
-					}
-				]
+				"items": ["nodejs", "golang", "python", "java", "kotlin"]
 			},
 			{
 				"category": { "es": "Frameworks", "en": "Frameworks" },
 				"items": [
-					{
-						"name": "Express",
-						"image": "/images/techstack/express.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "GraphQL",
-						"image": "/images/techstack/graphql.svg"
-					},
-					{
-						"name": "Fastify",
-						"image": "/images/techstack/fastify.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "Socket.io",
-						"image": "/images/techstack/socketio.svg"
-					},
-					{
-						"name": "Fiber",
-						"image": "/images/techstack/fiber.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "Gin",
-						"image": "/images/techstack/gin.svg"
-					},
-					{
-						"name": "Django",
-						"image": "/images/techstack/django.svg"
-					},
-					{
-						"name": "Flask",
-						"image": "/images/techstack/flask.svg"
-					},
-					{
-						"name": "Spring Boot",
-						"image": "/images/techstack/spring.svg"
-					}
+					"express",
+					"graphql",
+					"fastify",
+					"socketio",
+					"fiber",
+					"gin",
+					"django",
+					"flask",
+					"spring"
 				]
 			}
 		]
@@ -251,55 +82,15 @@
 		"categories": [
 			{
 				"category": { "es": "SQL", "en": "SQL" },
-				"items": [
-					{
-						"name": "MySQL",
-						"image": "/images/techstack/mysql.svg",
-						"isTooDark": true
-					},
-					{
-						"name": "PostgreSQL",
-						"image": "/images/techstack/postgresql.svg"
-					},
-					{
-						"name": "SQLite",
-						"image": "/images/techstack/sqlite.svg"
-					}
-				]
+				"items": ["mysql", "postgresql", "sqlite"]
 			},
 			{
 				"category": { "es": "NoSQL", "en": "NoSQL" },
-				"items": [
-					{
-						"name": "MongoDB",
-						"image": "/images/techstack/mongodb.svg"
-					},
-					{
-						"name": "Firebase",
-						"image": "/images/techstack/firebase.svg"
-					}
-				]
+				"items": ["mongodb", "firebase"]
 			},
 			{
 				"category": { "es": "Otros", "en": "Other" },
-				"items": [
-					{
-						"name": "Redis",
-						"image": "/images/techstack/redis.svg"
-					},
-					{
-						"name": "Supabase",
-						"image": "/images/techstack/supabase.svg"
-					},
-					{
-						"name": "Amazon S3",
-						"image": "/images/techstack/amazons3.svg"
-					},
-					{
-						"name": "Elasticsearch",
-						"image": "/images/techstack/elastic.svg"
-					}
-				]
+				"items": ["redis", "supabase", "amazons3", "elastic"]
 			}
 		]
 	},
@@ -313,46 +104,15 @@
 			"en": "Process automation and application deployment."
 		},
 		"items": [
-			{
-				"name": "Kubernetes",
-				"image": "/images/techstack/kubernetes.svg"
-			},
-			{
-				"name": "AWS",
-				"image": "/images/techstack/aws.svg"
-			},
-			{
-				"name": "Netlify",
-				"image": "/images/techstack/netlify.svg"
-			},
-			{
-				"name": "Vercel",
-				"image": "/images/techstack/vercel.svg",
-				"isTooDark": true
-			},
-			{
-				"name": "Google Play Console",
-				"image": "/images/techstack/googleplay.svg"
-			},
-			{
-				"name": "App Store Connect",
-				"image": "/images/techstack/appstore.svg",
-				"isTooDark": true
-			},
-			{
-				"name": "Fastlane",
-				"image": "/images/techstack/fastlane.svg"
-			},
-			{
-				"name": "Codemagic",
-				"image": "/images/techstack/codemagic.svg",
-				"isTooDark": true
-			},
-			{
-				"name": "TestFlight",
-				"image": "/images/techstack/testflight.svg",
-				"isTooDark": true
-			}
+			"kubernetes",
+			"aws",
+			"netlify",
+			"vercel",
+			"googleplay",
+			"appstore",
+			"fastlane",
+			"codemagic",
+			"testflight"
 		]
 	},
 	{
@@ -362,56 +122,18 @@
 			"en": "Additional tools and technologies that I use in my day to day."
 		},
 		"items": [
-			{
-				"name": "Figma",
-				"image": "/images/techstack/figma.svg"
-			},
-			{
-				"name": "Git",
-				"image": "/images/techstack/git.svg"
-			},
-			{
-				"name": "GitHub",
-				"image": "/images/techstack/github.svg",
-				"isTooDark": true
-			},
-			{
-				"name": "Jira",
-				"image": "/images/techstack/jira.svg"
-			},
-			{
-				"name": "Confluence",
-				"image": "/images/techstack/confluence.svg"
-			},
-			{
-				"name": "Postman",
-				"image": "/images/techstack/postman.svg"
-			},
-			{
-				"name": "Docker",
-				"image": "/images/techstack/docker.svg"
-			},
-			{
-				"name": "Xcode",
-				"image": "/images/techstack/xcode.svg"
-			},
-			{
-				"name": "Android Studio",
-				"image": "/images/techstack/androidstudio.svg"
-			},
-			{
-				"name": "VSCode",
-				"image": "/images/techstack/vscode.svg"
-			},
-			{
-				"name": "Godot",
-				"image": "/images/techstack/godot.svg"
-			},
-			{
-				"name": "Unity",
-				"image": "/images/techstack/unity.svg",
-				"isTooDark": true
-			}
+			"figma",
+			"git",
+			"github",
+			"jira",
+			"confluence",
+			"postman",
+			"docker",
+			"xcode",
+			"androidstudio",
+			"vscode",
+			"godot",
+			"unity"
 		]
 	}
 ]

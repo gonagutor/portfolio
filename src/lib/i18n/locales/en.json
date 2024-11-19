@@ -15,7 +15,8 @@
 		"experience": "My work experience"
 	},
 	"content": {
-		"aboutMe": "Hello! I'm Gonzalo<br/><br/>A <b>Fullstack developer with 3 years of experience</b> transforming ideas into tangible products.<br/><br/>I've worked for projects such as <b>Wabi</b> (Santander Bank's vehicle renting), where I was in charge of the web application, mobile, and backend development<br/><br/>I'm mostly a self taught programmer, with a great handle on languages like <b>Java, Javascript, Go and Dart.</b><br/><br/>I love solving problems, and I'm familiar with Agile Development principles.<br/><br/>I'm always diving deeper in what I know and learning new things. I always have some side project that is always on the outter bounds of what I can do.<br/><br/>Looks like I would be a fit in your team? Do you have a project in mind? <b>Contact me!</b><br/><br/>If you still need some convincing swipe right or click the arrow to view my projects and experience"
+		"aboutMe": "Hello! I'm Gonzalo<br/><br/>A <b>Fullstack developer with 3 years of experience</b> transforming ideas into tangible products.<br/><br/>I've worked for projects such as <b>Wabi</b> (Santander Bank's vehicle renting), where I was in charge of the web application, mobile, and backend development<br/><br/>I'm mostly a self taught programmer, with a great handle on languages like <b>Java, Javascript, Go and Dart.</b><br/><br/>I love solving problems, and I'm familiar with Agile Development principles.<br/><br/>I'm always diving deeper in what I know and learning new things. I always have some side project that is always on the outter bounds of what I can do.<br/><br/>Looks like I would be a fit in your team? Do you have a project in mind? <b>Contact me!</b><br/><br/>If you still need some convincing swipe right or click the arrow to view my projects and experience",
+		"now": "Now"
 	},
 	"alt": {
 		"enableDarkMode": "Enable dark mode",
