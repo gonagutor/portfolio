@@ -13,4 +13,5 @@ export interface Category {
 export interface Item {
 	name: string;
 	image: string;
+	isTooDark?: boolean;
 }

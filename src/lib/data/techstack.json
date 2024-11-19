@@ -52,7 +52,8 @@
 					},
 					{
 						"name": "Next.js",
-						"image": "/images/techstack/nextjs.svg"
+						"image": "/images/techstack/nextjs.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "Gatsby",
@@ -73,7 +74,8 @@
 					},
 					{
 						"name": "Apollo Client",
-						"image": "/images/techstack/apollo.svg"
+						"image": "/images/techstack/apollo.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "Jest",
@@ -199,7 +201,8 @@
 				"items": [
 					{
 						"name": "Express",
-						"image": "/images/techstack/express.svg"
+						"image": "/images/techstack/express.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "GraphQL",
@@ -207,7 +210,8 @@
 					},
 					{
 						"name": "Fastify",
-						"image": "/images/techstack/fastify.svg"
+						"image": "/images/techstack/fastify.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "Socket.io",
@@ -215,7 +219,8 @@
 					},
 					{
 						"name": "Fiber",
-						"image": "/images/techstack/fiber.svg"
+						"image": "/images/techstack/fiber.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "Gin",
@@ -249,7 +254,8 @@
 				"items": [
 					{
 						"name": "MySQL",
-						"image": "/images/techstack/mysql.svg"
+						"image": "/images/techstack/mysql.svg",
+						"isTooDark": true
 					},
 					{
 						"name": "PostgreSQL",
@@ -344,7 +350,8 @@
 			},
 			{
 				"name": "TestFlight",
-				"image": "/images/techstack/testflight.svg"
+				"image": "/images/techstack/testflight.svg",
+				"isTooDark": true
 			}
 		]
 	},
@@ -402,7 +409,8 @@
 			},
 			{
 				"name": "Unity",
-				"image": "/images/techstack/unity.svg"
+				"image": "/images/techstack/unity.svg",
+				"isTooDark": true
 			}
 		]
 	}

@@ -1,3 +1,4 @@
+'use client';
 import { onMount } from 'svelte';
 import { Writable, writable } from 'svelte/store';
 
@@ -10,7 +11,7 @@ export const THEMES = {
 
 export type Theme = (typeof THEMES)[keyof typeof THEMES];
 
-export function createThemeStore() {
+function createThemeStore() {
 	const themeStore: Writable<Theme> = writable(THEMES.LIGHT);
 
 	const toggleTheme = () =>
@@ -30,7 +31,9 @@ export function createThemeStore() {
 			return to;
 		});
 
-	onMount(() => {
+	const initializeTheme = () => {
+		if (typeof window === 'undefined') return;
+
 		if (
 			localStorage.getItem(DATA_THEME_KEY) === THEMES.DARK ||
 			(window.matchMedia('(prefers-color-scheme: dark)').matches &&
@@ -39,7 +42,9 @@ export function createThemeStore() {
 			return changeTheme(THEMES.DARK);
 
 		return changeTheme(THEMES.LIGHT);
-	});
+	};
+
+	initializeTheme();
 
 	return {
 		themeStore,
@@ -47,3 +52,4 @@ export function createThemeStore() {
 		toggleTheme
 	};
 }
+export const { themeStore, changeTheme, toggleTheme } = createThemeStore();

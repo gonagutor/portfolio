@@ -2,9 +2,8 @@
 	import Sun from '$components/common/Icons/Sun.svelte';
 	import Moon from '$components/common/Icons/Moon.svelte';
 	import { t } from '$lib/i18n/i18n';
-	import { createThemeStore } from '$lib/stores/theme';
+	import { themeStore, toggleTheme } from '$lib/stores/theme';
 
-	const { themeStore, toggleTheme } = createThemeStore();
 	export let size = 32;
 </script>
 
