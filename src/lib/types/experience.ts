@@ -2,19 +2,21 @@ interface Experience {
 	company: string;
 	position: Record<string, string>;
 	image: string;
-	imageNeedsInvert?: boolean;
+	isTooDark?: boolean;
+	isTooLight?: boolean;
 	startDate: string;
 	endDate: string | null;
 	description: Record<string, string>;
-	projects: Project[];
+	projects: CompanyProject[];
 }
 
-interface Project {
+interface CompanyProject {
 	name: string;
 	image: string;
-	imageNeedsInvert?: boolean;
+	isTooDark?: boolean;
+	isTooLight?: boolean;
 	description: Record<string, string>;
 	technologies: string[];
 }
 
-export type { Experience, Project };
+export type { Experience, CompanyProject };

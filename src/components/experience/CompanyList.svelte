@@ -9,11 +9,14 @@
 </script>
 
 <ul class="company-list">
-	{#each typedExperience as { image, company, startDate, endDate, position, description, projects, imageNeedsInvert }}
+	{#each typedExperience as { image, company, startDate, endDate, position, description, projects, isTooDark, isTooLight }}
 		<li class="company-item">
 			<section class="company-info">
 				<img
-					style={$themeStore === THEMES.DARK && imageNeedsInvert ? 'filter: invert();' : ''}
+					style={($themeStore === THEMES.DARK && isTooDark) ||
+					($themeStore === THEMES.LIGHT && isTooLight)
+						? 'filter: invert();'
+						: ''}
 					src={image}
 					alt={company}
 				/>
@@ -22,12 +25,15 @@
 					<h3>{startDate} - {endDate || $t('content.now')}</h3>
 				</div>
 			</section>
-			<p class="company-description">{description[$locale]}</p>
+			<p class="company-description">{@html description[$locale]}</p>
 			<ul class="company-project-list">
-				{#each projects as { name, image, description, technologies, imageNeedsInvert }}
+				{#each projects as { name, image, description, technologies, isTooDark, isTooLight }}
 					<li class="company-project-item">
 						<img
-							style={$themeStore === THEMES.DARK && imageNeedsInvert ? 'filter: invert();' : ''}
+							style={($themeStore === THEMES.DARK && isTooDark) ||
+							($themeStore === THEMES.LIGHT && isTooLight)
+								? 'filter: invert();'
+								: ''}
 							src={image}
 							alt={name}
 						/>
@@ -47,6 +53,9 @@
 	p {
 		font-size: 1.1rem;
 		line-height: 1.35rem;
+	}
+	img {
+		object-fit: contain;
 	}
 
 	.company-list {

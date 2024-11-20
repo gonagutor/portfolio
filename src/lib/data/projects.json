@@ -1,0 +1,20 @@
+[
+	{
+		"name": {
+			"es": "Proyecto 1",
+			"en": "Project 1"
+		},
+		"description": {
+			"es": "Descripción del proyecto 1",
+			"en": "Description of project 1"
+		},
+		"logo": "https://via.placeholder.com/150",
+		"images": [
+			"https://via.placeholder.com/150",
+			"https://via.placeholder.com/150",
+			"https://via.placeholder.com/150"
+		],
+		"technologies": ["html", "css", "javascript"],
+		"link": "https://www.google.com"
+	}
+]

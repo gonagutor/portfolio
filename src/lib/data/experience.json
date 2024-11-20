@@ -6,12 +6,12 @@
 			"es": "Desarrollador Fullstack"
 		},
 		"image": "/images/company/softtek/softtek.svg",
-		"imageNeedsInvert": true,
+		"isTooDark": true,
 		"startDate": "2021-11-15",
 		"endDate": null,
 		"description": {
-			"en": "I worked on several distinct projects for a financial institution, primarily as a Fullstack Developer. Initially, I integrated ElectronicID’s (Signicat) native library into a React Native app, later migrating it to a Capacitor-based solution for a unified web and mobile codebase. To retain critical functionality, I built native modules in Swift and Java for libraries like Branch and Stripe. Additionally, I led platform-wide initiatives, including a full app redesign, multi-tenancy support, and a new coupon system, using Fastify and GraphQL. I focused on comprehensive testing (Jest, Mocha, and custom libraries), legacy code optimization, and security improvements. In another project, I developed a VanillaJS-based banking security frontend library with wrappers for React, Angular, and Darwin.",
-			"es": "Trabajé en varios proyectos distintos para una institución financiera, principalmente como desarrollador Fullstack. Inicialmente, integré la biblioteca nativa de ElectronicID (Signicat) en una aplicación React Native, y más tarde la migré a una solución basada en Capacitor para una base de código web y móvil unificada. Para mantener la funcionalidad crítica, construí módulos nativos en Swift y Java para bibliotecas como Branch y Stripe. Además, dirigí iniciativas en toda la plataforma, incluyendo un rediseño completo de la aplicación, soporte multi-tenancy, y un nuevo sistema de cupones, utilizando Fastify y GraphQL. Me centré en pruebas integrales (Jest, Mocha y bibliotecas personalizadas), optimización de código heredado y mejoras de seguridad. En otro proyecto, desarrollé una biblioteca de frontend de seguridad bancaria basada en VanillaJS con wrappers para React, Angular y Darwin."
+			"en": "<p>I worked on several distinct projects for a financial institution, primarily as a Fullstack Developer.</p><p> Initially, I integrated ElectronicID’s (Signicat) native library into a React Native app, later migrating it to a Capacitor-based solution for a unified web and mobile codebase. To retain critical functionality, I built native modules in Swift and Java for libraries like Branch and Stripe. Additionally, I led platform-wide initiatives, including a full app redesign, multi-tenancy support, and a new coupon system, using Fastify and GraphQL. I focused on comprehensive testing (Jest, Mocha, and custom libraries), legacy code optimization, and security improvements. In another project, I developed a VanillaJS-based banking security frontend library with wrappers for React and Angular.</p>",
+			"es": "<p>Trabajé en varios proyectos distintos para una institución financiera, principalmente como desarrollador Fullstack.</p><p> Inicialmente, integré la biblioteca nativa de ElectronicID (Signicat) en una aplicación React Native, y más tarde la migré a una solución basada en Capacitor para una base de código web y móvil unificada. Para mantener la funcionalidad crítica, construí módulos nativos en Swift y Java para bibliotecas como Branch y Stripe. Además, dirigí iniciativas en toda la plataforma, incluyendo un rediseño completo de la aplicación, soporte multi-tenancy, y un nuevo sistema de cupones, utilizando Fastify y GraphQL. Me centré en pruebas integrales (Jest, Mocha y bibliotecas personalizadas), optimización de código heredado y mejoras de seguridad. En otro proyecto, desarrollé una biblioteca de frontend de seguridad bancaria basada en VanillaJS con wrappers para React and Angular.</p>"
 		},
 		"projects": [
 			{
@@ -56,5 +56,21 @@
 				"technologies": ["typescript", "javascript", "react", "angular", "html", "css"]
 			}
 		]
+	},
+	{
+		"company": "42 Madrid (Fundación Telefónica)",
+		"position": {
+			"en": "Student",
+			"es": "Estudiante"
+		},
+		"image": "/images/company/42/42ft.png",
+		"isTooLight": true,
+		"startDate": "2021-02-01",
+		"endDate": "2023-09-01",
+		"description": {
+			"en": "<p>42 Madrid, a software engineering school which belongs to Fundación Telefónica.</p> <p>The entrance exam, known as “the pool”, lasts a month and has a high level of difficulty, so not many people manage to pass it. Despite the pandemic delaying my entrance to campus, I managed to pass it.</p> </p> The curriculum is project-based and peer-reviewed, with no teachers or classes. I have completed several projects, including a shell, a raytracer, a web server, and a many more. I learnt C, C++, and more.",
+			"es": "<p>42 Madrid, una escuela de ingeniería de software que pertenece a la Fundación Telefónica. <p>El examen de acceso, conocido como \"la piscina\", dura un mes y tiene un alto nivel de dificultad, por lo que no muchas personas logran superarlo. A pesar de que la pandemia retrasó mi ingreso al campus, logré aprobarlo.</p> </p> El plan de estudios se basa en proyectos y es revisado por pares, sin profesores ni clases. He completado varios proyectos, incluyendo un shell, un raytracer, un servidor web y muchos más. Aprendí C, C++ y más."
+		},
+		"projects": []
 	}
 ]
