@@ -130,7 +130,7 @@
 		{#key data.url}
 			<div
 				on:touchmove|passive={handleDrag}
-				on:touchend={handleDragEnd}
+				on:touchend|passive={handleDragEnd}
 				on:touchstart|passive={handleDragStart}
 				in:transition={inParams}
 				out:transition={outParams}

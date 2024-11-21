@@ -63,6 +63,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+		margin-top: 0;
 		width: 100%;
 	}
 
@@ -91,8 +92,12 @@
 		align-items: center;
 
 		gap: 2rem;
-		padding: 1rem;
+		padding-bottom: 2rem;
 		border-radius: 0.5rem;
+	}
+
+	.company-project-item:last-child {
+		padding-bottom: 0;
 	}
 
 	.company-project-item img {

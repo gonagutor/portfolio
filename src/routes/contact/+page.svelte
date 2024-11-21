@@ -23,5 +23,6 @@
 		min-height: calc(100vh - 4.688rem - 3rem);
 		min-height: calc(100dvh - 4.688rem - 3rem);
 		padding-inline: 7rem;
+		pointer-events: all;
 	}
 </style>

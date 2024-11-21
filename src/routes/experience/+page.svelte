@@ -27,6 +27,7 @@
 		padding-inline: 4rem;
 		padding-bottom: 3rem;
 		margin-inline: 3rem;
+		pointer-events: all;
 	}
 
 	.title-section {
