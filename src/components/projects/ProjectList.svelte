@@ -79,6 +79,7 @@
 		border: none;
 		text-align: left;
 		font-family: var(--font);
+		color: var(--foreground);
 
 		gap: 2rem;
 		width: 100%;
