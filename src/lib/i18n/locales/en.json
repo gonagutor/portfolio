@@ -23,6 +23,7 @@
 			"email": "Email",
 			"message": "Message",
 			"submit": "Contact me",
+			"sent": "<b>Message sent</b><br/> Thank you for contacting me, I'll get back to you as soon as possible.",
 			"errors": {
 				"nameRequired": "The name is required",
 				"emailRequired": "The email is required",

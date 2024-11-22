@@ -23,6 +23,7 @@
 			"email": "Correo electrónico",
 			"message": "Mensaje",
 			"submit": "Contacta conmigo",
+			"sent": "<b>Mensaje enviado</b><br/> Gracias por contactar conmigo, te responderé lo antes posible.",
 			"errors": {
 				"nameRequired": "El nombre es obligatorio",
 				"emailRequired": "El correo electrónico es obligatorio",

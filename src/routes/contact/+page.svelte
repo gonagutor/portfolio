@@ -2,12 +2,14 @@
 	import { t } from '$lib/i18n/i18n';
 	import { writable } from 'svelte/store';
 	import { PUBLIC_RECAPTCHA_KEY } from '$env/static/public';
+	import Tick from '$components/common/Icons/Tick.svelte';
 
 	let name = writable('');
 	let surname = writable('');
 	let email = writable('');
 	let message = writable('');
 	let error = writable('');
+	let sent = writable(false);
 
 	const sendRequest = async (token: string) => {
 		if (!$name) {
@@ -49,6 +51,7 @@
 			surname.set('');
 			email.set('');
 			message.set('');
+			sent.set(true);
 		}
 	};
 
@@ -81,18 +84,26 @@
 		<h1>{$t('title.contactMe')}</h1>
 		<p>{@html $t('content.contactMe')}</p>
 	</section>
-	<form class="contact-form" on:submit|preventDefault={handleSumbit}>
-		<div style="display: flex; gap: 1rem;">
-			<input type="text" bind:value={$name} placeholder={$t('content.contactForm.name')} />
-			<input type="text" bind:value={$surname} placeholder={$t('content.contactForm.surname')} />
-		</div>
-		<input type="email" bind:value={$email} placeholder={$t('content.contactForm.email')} />
-		<textarea bind:value={$message} placeholder={$t('content.contactForm.message')} />
-		<button type="submit">{$t('content.contactForm.submit')}</button>
-		{#if $error}
-			<p style="color: red;">{$error}</p>
+	<section class="form-container">
+		<form class="contact-form" on:submit|preventDefault={handleSumbit}>
+			<div style="display: flex; gap: 1rem;">
+				<input type="text" bind:value={$name} placeholder={$t('content.contactForm.name')} />
+				<input type="text" bind:value={$surname} placeholder={$t('content.contactForm.surname')} />
+			</div>
+			<input type="email" bind:value={$email} placeholder={$t('content.contactForm.email')} />
+			<textarea bind:value={$message} placeholder={$t('content.contactForm.message')} />
+			<button type="submit">{$t('content.contactForm.submit')}</button>
+			{#if $error}
+				<p style="color: red;">{$error}</p>
+			{/if}
+		</form>
+		{#if $sent}
+			<div class="sent-cover">
+				<Tick size={64} />
+				<p>{@html $t('content.contactForm.sent')}</p>
+			</div>
 		{/if}
-	</form>
+	</section>
 </div>
 
 <style>
@@ -118,6 +129,26 @@
 	.contact-text h1 {
 		margin-bottom: 0;
 		font-family: var(--font-display);
+	}
+
+	.form-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sent-cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: var(--background);
+		text-align: center;
 	}
 
 	.contact-form {
