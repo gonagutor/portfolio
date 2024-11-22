@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
+	import { debounce } from 'lodash-es';
 	import { goto } from '$app/navigation';
 
 	import PositionMarker from '$components/common/Icons/PositionMarker.svelte';
@@ -10,6 +11,7 @@
 
 	export let current: string;
 	let scroller: Element;
+	let isFirefox = false;
 
 	function scrollPageButtonIntoView({
 		element = document.querySelector(`.mobile-nav-item#${MOBILE_ROUTE_TAG_MAPPING[current]}`),
@@ -45,7 +47,7 @@
 		return nearestIndex;
 	};
 
-	function onScrollEnd() {
+	const onScrollEnd = () => {
 		const nearestIndex = findNearest(
 			Array.from(scroller.children) as HTMLElement[],
 			scroller.scrollLeft
@@ -57,7 +59,9 @@
 			element: document.querySelector(`.mobile-nav-item#${MOBILE_ROUTE_TAG_MAPPING[route]}`),
 			fast: true
 		});
-	}
+	};
+
+	const onScrollEndDebounced = debounce(onScrollEnd, 1000);
 
 	onMount(() => {
 		function handleResize() {
@@ -66,6 +70,7 @@
 		}
 
 		handleResize();
+		isFirefox = !!navigator.userAgent.match(/firefox|fxios/i);
 		window.addEventListener('resize', handleResize);
 
 		return () => window.removeEventListener('resize', handleResize);
@@ -85,7 +90,11 @@
 	</section>
 	<section class="navigator-container">
 		<PositionMarker />
-		<ul class="navigator" bind:this={scroller} on:scrollend={onScrollEnd}>
+		<ul
+			class="navigator"
+			bind:this={scroller}
+			on:scrollend={isFirefox ? onScrollEndDebounced : onScrollEnd}
+		>
 			{#each Object.keys(MOBILE_ROUTE_TAG_MAPPING) as route}
 				<li>
 					<a
