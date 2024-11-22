@@ -131,6 +131,11 @@
 		font-family: var(--font-display);
 	}
 
+	.contact-text p {
+		font-size: 1.25rem;
+		line-height: 1.35rem;
+	}
+
 	.form-container {
 		position: relative;
 		display: flex;
