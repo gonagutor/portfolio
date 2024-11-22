@@ -16,6 +16,20 @@
 	},
 	"content": {
 		"aboutMe": "Hello! I'm Gonzalo<br/><br/>A <b>Fullstack developer with 3 years of experience</b> transforming ideas into tangible products.<br/><br/>I've worked for projects such as <b>Wabi</b> (Santander Bank's vehicle renting), where I was in charge of the web application, mobile, and backend development<br/><br/>I'm mostly a self taught programmer, with a great handle on languages like <b>Java, Javascript, Go and Dart.</b><br/><br/>I love solving problems, and I'm familiar with Agile Development principles.<br/><br/>I'm always diving deeper in what I know and learning new things. I always have some side project that is always on the outter bounds of what I can do.<br/><br/>Looks like I would be a fit in your team? Do you have a project in mind? <b>Contact me!</b><br/><br/>If you still need some convincing swipe right or click the arrow to view my projects and experience",
+		"contactMe": "<p>Just in case someone sent you this link and you have not seen my work I'll introduce myself, but please do take a look!<p>Hi! I'm Gonzalo</p><p>I'm a <b>Fullstack developer</b> with 3 years of professional experience transforming ideas into tangible software.</p><p>If you’re looking for someone to collaborate on a project, discuss interesting tech challenges, or even brainstorm ideas, feel free to reach out! I’m especially interested in backend development, system architecture, and anything that pushes me to think outside the box.</p><p>You can contact me through email at <a href='mailto:gonagutor@gmail.com'>gonagutor@gmail.com</a> or using the form in this page. You can also find me on <a href='https://github.com/gonagutor' target='_blank'>GitHub</a> to see more of my work. Connect with me on <a href='https://www.linkedin.com/in/gonagutor/' target='_blank'>LinkedIn</a>. Let’s build something awesome together!</p>",
+		"contactForm": {
+			"name": "Name",
+			"surname": "Surname",
+			"email": "Email",
+			"message": "Message",
+			"submit": "Contact me",
+			"errors": {
+				"nameRequired": "The name is required",
+				"emailRequired": "The email is required",
+				"messageRequired": "The message is required",
+				"emailInvalid": "The email is not valid"
+			}
+		},
 		"now": "Now"
 	},
 	"alt": {

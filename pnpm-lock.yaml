@@ -11,6 +11,9 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+      nodemailer:
+        specifier: ^6.9.16
+        version: 6.9.16
     devDependencies:
       '@fontsource/fira-mono':
         specifier: ^4.5.10
@@ -863,6 +866,10 @@ packages:
   node-gyp-build@4.6.0:
     resolution: {integrity: sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==}
     hasBin: true
+
+  nodemailer@6.9.16:
+    resolution: {integrity: sha512-psAuZdTIRN08HKVd/E8ObdV6NO7NTBY3KsC30F7M4H1OnmLCUNaS56FpYxyb26zWLSyYF9Ozch9KYHhHegsiOQ==}
+    engines: {node: '>=6.0.0'}
 
   nopt@5.0.0:
     resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==}
@@ -2092,6 +2099,8 @@ snapshots:
       whatwg-url: 5.0.0
 
   node-gyp-build@4.6.0: {}
+
+  nodemailer@6.9.16: {}
 
   nopt@5.0.0:
     dependencies:

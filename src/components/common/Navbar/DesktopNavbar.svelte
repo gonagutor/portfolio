@@ -88,6 +88,8 @@
 	.navigator > li > a[aria-current='true'] {
 		padding: 0.75rem;
 		border-radius: 50rem;
+
+		color: var(--foreground) !important;
 		background: var(--highlight-gradient);
 	}
 
