@@ -128,6 +128,7 @@
 
 	.contact-text h1 {
 		margin-bottom: 0;
+		font-size: 2em;
 		font-family: var(--font-display);
 	}
 
@@ -140,6 +141,11 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+	}
+
+	.contact-form > div {
+		width: 100%;
 	}
 
 	.sent-cover {
@@ -161,7 +167,6 @@
 		flex-direction: column;
 		gap: 1rem;
 		width: 100%;
-		max-width: 500px;
 	}
 
 	input,
@@ -208,7 +213,7 @@
 			padding-inline: 3rem;
 			padding-bottom: 2rem;
 		}
-		form > div {
+		.contact-form > div {
 			flex-direction: column;
 			gap: 0.5rem;
 		}
