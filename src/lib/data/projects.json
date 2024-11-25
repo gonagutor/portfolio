@@ -12,27 +12,12 @@
 			"es": "<p>A lo largo de los años, he trabajado varias veces en un sistema para <strong>Dungeons and Dragons</strong>, rediseñándolo con diferentes tecnologías mientras mejoraba como desarrollador. Aunque pueda parecer un juego sencillo, lleva detrás una carga inmensa de cálculos y datos: clases, razas, objetos... Cada elemento requiere una estructura compleja, y crear un sistema flexible que permita añadir nuevos elementos sin reprogramarlos manualmente es un reto enorme.</p><p>Mi principal enfoque no ha sido tanto en la interfaz de usuario, sino en el backend: diseñar una base sólida que soporte todo sin desmoronarse al intentar expandirlo. En esta última versión, que estoy desarrollando junto a mi amigo <a href='https://github.com/DamSergio' target='_blank'>Sergio</a>, estamos usando React con Redux y TypeScript para el frontend, Golang (con el framework Fiber) para el backend y PostgreSQL como base de datos.</p><p>Este proyecto también tiene un objetivo especial: ayudar a Sergio a aprender más sobre React y Go. Aunque tiene menos experiencia, su ayuda ha sido clave, y colaborar con él ha hecho que avanzar sea más divertido y llevadero.</p><p>Todo el progreso lo estamos gestionando en <a href='https://github.com/users/gonagutor/projects/5' target='_blank'>GitHub Projects</a>, y puedes ver el código del backend en nuestro <a href='https://github.com/gonagutor/dnd-backend' target='_blank'>repositorio</a>. También puedes ver el del frontend en este <a href='https://github.com/gonagutor/dnd-frontend' target='_blank'>repositorio</a>. Todavía queda muchísimo trabajo por hacer, ya que los dos hemos estado muy ocupados últimamente, pero está siendo un viaje interesante</p>",
 			"en": "<p>Over the years, I’ve worked on building a system for<strong>Dungeons and Dragons</strong>multiple times, redesigning it with different technologies as I grew as a developer. While it might seem like a simple game, it actually involves a massive amount of calculations and data: classes, races, items... Every element requires a complex structure. Building a flexible system that allows adding new elements without reprogramming them manually is a huge challenge.</p><p>My main focus hasn’t been on the user interface but on the backend: creating a solid foundation that can handle growth without breaking apart. In this latest version, which I’m working on with my friend <a href='https://github.com/DamSergio' target='_blank'>Sergio</a>, we’re using React with Redux and TypeScript for the frontend, Golang (with the Fiber framework) for the backend and PostgreSQL as the database.</p><p>This project also has a special goal: helping Sergio learn more about React and Go. Even though he has less experience, his contributions have been crucial, and working with him has made the process more fun and enjoyable.</p><p>We’re managing all the progress on <a href='https://github.com/users/gonagutor/projects/5' target='_blank'>GitHub Projects</a>, and you can check out the backend code in our <a href='https://github.com/gonagutor/dnd-backend' target='_blank'>repository</a>. You can also check the frontend in this <a href='https://github.com/gonagutor/dnd-frontend' target='_blank'>repository</a>. There is still a lot of work to be done, as we have both been very busy lately, but it has been an interesting trip.</p>"
 		},
-		"logo": "https://via.placeholder.com/150",
+		"logo": "/images/projects/heropad/heropad-logo-text.svg",
 		"images": [
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150",
-			"https://via.placeholder.com/150"
+			"/images/projects/heropad/heropad-settings-page.png",
+			"/images/projects/heropad/heropad-view-users-page.png",
+			"/images/projects/heropad/heropad-user-create-character.png",
+			"/images/projects/heropad/heropad-user-dashboard.png"
 		],
 		"technologies": [
 			"html",

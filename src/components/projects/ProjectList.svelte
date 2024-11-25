@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { t, locale } from '$lib/i18n/i18n';
+	import { writable } from 'svelte/store';
+	import { slide } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+	import { locale } from '$lib/i18n/i18n';
 	import TechnologiesList from '$components/common/TechnologiesList.svelte';
 	import projects from '$lib/data/projects.json';
 	import type { Project } from '$lib/types/project';
-	import { themeStore, THEMES } from '$lib/stores/theme';
-	import { writable } from 'svelte/store';
 	import Chevron from '$components/common/Icons/Chevron.svelte';
 
 	const typedProjects: Project[] = projects;
@@ -30,8 +31,8 @@
 					height="4vw"
 				/>
 			</button>
-			<section class="project-content">
-				{#if $projectsOpen[i]}
+			{#if $projectsOpen[i]}
+				<section class="project-content" transition:slide={{ duration: 300, easing: cubicOut }}>
 					<p>{@html description[$locale]}</p>
 					<TechnologiesList items={technologies} />
 					<ul class="image-list">
@@ -41,8 +42,8 @@
 							</li>
 						{/each}
 					</ul>
-				{/if}
-			</section>
+				</section>
+			{/if}
 		</li>
 	{/each}
 </ul>
@@ -121,7 +122,9 @@
 	.image-list-item img {
 		width: 100%;
 		height: auto;
-		object-fit: cover;
+		object-fit: contain;
+		max-height: 24rem;
+		max-width: 24rem;
 	}
 
 	@media (max-width: 842px) {
