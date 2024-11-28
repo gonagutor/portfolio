@@ -8,8 +8,13 @@
 	import type { Project } from '$lib/types/project';
 	import { t } from '$lib/i18n/i18n';
 	import Chevron from '$components/common/Icons/Chevron.svelte';
+	import { PUBLIC_DISABLE_POLITICALLY_INCLINED_PROJECTS } from '$env/static/public';
 
-	const typedProjects: Project[] = projects;
+	const typedProjects: Project[] =
+		PUBLIC_DISABLE_POLITICALLY_INCLINED_PROJECTS &&
+		PUBLIC_DISABLE_POLITICALLY_INCLINED_PROJECTS === 'true'
+			? projects.filter((projects) => !projects.politicallyInclined)
+			: projects;
 	const projectsOpen = writable(Array(typedProjects.length).fill(false));
 </script>
 
