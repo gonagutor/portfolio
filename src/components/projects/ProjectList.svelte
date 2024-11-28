@@ -36,7 +36,9 @@
 					<h3>{shortDescription[$locale]}</h3>
 				</div>
 				<Chevron
-					style="margin-left: auto; min-width: 64px; min-height: 64px;"
+					style={`margin-left: auto; min-width: 64px; min-height: 64px; transition: transform 0.3s; ${
+						$projectsOpen[i] ? '' : 'transform: rotate(180deg);'
+					}`}
 					width="4vw"
 					height="4vw"
 				/>
