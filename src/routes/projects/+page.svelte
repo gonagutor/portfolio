@@ -14,9 +14,17 @@
 		<p>{$t('description.projects')}</p>
 	</div>
 	<ProjectList />
+	<p class="projects-footer">
+		{@html $t('footer.projects')}
+	</p>
 </div>
 
 <style>
+	.projects-footer {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
 	.projects-container {
 		display: flex;
 		flex-direction: column;

@@ -31,7 +31,11 @@
 				"emailInvalid": "The email is not valid"
 			}
 		},
-		"now": "Now"
+		"now": "Now",
+		"logoNotAvailable": "Logo not available"
+	},
+	"footer": {
+		"projects": "Some of these projects are public in my <a href='https://github.com/gonagutor/' target='_blank'>GitHub</a> some are not, but if you are interested in any of them don't hesitate to contact me. This is not the full view of my projects, my projects folder has 68 folders, almost each project with different technologies"
 	},
 	"alt": {
 		"enableDarkMode": "Enable dark mode",

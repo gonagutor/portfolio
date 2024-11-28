@@ -135,6 +135,10 @@
 		"image": "/images/techstack/express.svg",
 		"isTooDark": true
 	},
+	"electronjs": {
+		"name": "Electron JS",
+		"image": "/images/techstack/electronjs.svg"
+	},
 	"graphql": {
 		"name": "GraphQL",
 		"image": "/images/techstack/graphql.svg"
@@ -236,6 +240,10 @@
 		"name": "Fastlane",
 		"image": "/images/techstack/fastlane.svg"
 	},
+	"ffmpeg": {
+		"name": "FFmpeg",
+		"image": "/images/techstack/ffmpeg.svg"
+	},
 	"codemagic": {
 		"name": "Codemagic",
 		"image": "/images/techstack/codemagic.svg",
@@ -295,5 +303,14 @@
 		"name": "Unity",
 		"image": "/images/techstack/unity.svg",
 		"isTooDark": true
+	},
+	"flutterbloc": {
+		"name": "Flutter Bloc",
+		"image": "/images/techstack/flutterbloc.png"
+	},
+	"prisma": {
+		"name": "Prisma",
+		"image": "/images/techstack/prisma.svg",
+		"isTooLight": true
 	}
 }

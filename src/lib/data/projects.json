@@ -1,12 +1,29 @@
 [
 	{
 		"name": {
+			"es": "Portfolio",
+			"en": "Portfolio"
+		},
+		"shortDescription": {
+			"es": "Mi portfolio personal",
+			"en": "My personal portfolio"
+		},
+		"description": {
+			"es": "<p>Este es mi portfolio personal, donde muestro mis proyectos y habilidades. Este no es el primer portfolio que hago ni será el último, pero para este he decidido usar<strong>Svelte</strong>.</p><p>El código fuente de este portfolio está disponible en mi<a href='https://github.com/gonagutor/portfolio' target='_blank'>repositorio de GitHub</a>, por si quieres echarle un vistazo</p>",
+			"en": "<p>This is my personal portfolio, where I showcase my projects and skills. This is not the first portfolio I’ve made, and it won’t be the last, but for this one, I decided to use<strong>Svelte</strong>.</p><p>The source code for this portfolio is available in my<a href='https://github.com/gonagutor/portfolio' target='_blank'>GitHub repository</a>, in case you want to take a look</p>"
+		},
+		"logo": "/favicon.png",
+		"images": [],
+		"technologies": ["html", "css", "typescript", "svelte"]
+	},
+	{
+		"name": {
 			"es": "HeroPad",
 			"en": "HeroPad"
 		},
 		"shortDescription": {
-			"es": "Plataforma para crear y gestionar personajes de dungeons and dragons",
-			"en": "Platform to create and manage dungeons and dragons characters"
+			"es": "Plataforma para crear y gestionar personajes de Dungeons and Dragons",
+			"en": "Platform to create and manage Dungeons and Dragons characters"
 		},
 		"description": {
 			"es": "<p>A lo largo de los años, he trabajado varias veces en un sistema para <strong>Dungeons and Dragons</strong>, rediseñándolo con diferentes tecnologías mientras mejoraba como desarrollador. Aunque pueda parecer un juego sencillo, lleva detrás una carga inmensa de cálculos y datos: clases, razas, objetos... Cada elemento requiere una estructura compleja, y crear un sistema flexible que permita añadir nuevos elementos sin reprogramarlos manualmente es un reto enorme.</p><p>Mi principal enfoque no ha sido tanto en la interfaz de usuario, sino en el backend: diseñar una base sólida que soporte todo sin desmoronarse al intentar expandirlo. En esta última versión, que estoy desarrollando junto a mi amigo <a href='https://github.com/DamSergio' target='_blank'>Sergio</a>, estamos usando React con Redux y TypeScript para el frontend, Golang (con el framework Fiber) para el backend y PostgreSQL como base de datos.</p><p>Este proyecto también tiene un objetivo especial: ayudar a Sergio a aprender más sobre React y Go. Aunque tiene menos experiencia, su ayuda ha sido clave, y colaborar con él ha hecho que avanzar sea más divertido y llevadero.</p><p>Todo el progreso lo estamos gestionando en <a href='https://github.com/users/gonagutor/projects/5' target='_blank'>GitHub Projects</a>, y puedes ver el código del backend en nuestro <a href='https://github.com/gonagutor/dnd-backend' target='_blank'>repositorio</a>. También puedes ver el del frontend en este <a href='https://github.com/gonagutor/dnd-frontend' target='_blank'>repositorio</a>. Todavía queda muchísimo trabajo por hacer, ya que los dos hemos estado muy ocupados últimamente, pero está siendo un viaje interesante</p>",
@@ -32,5 +49,181 @@
 			"postgresql",
 			"vercel"
 		]
+	},
+	{
+		"name": {
+			"es": "Hive",
+			"en": "Hive"
+		},
+		"shortDescription": {
+			"es": "Juego de mesa en línea en tiempo real",
+			"en": "Online board game in real time"
+		},
+		"description": {
+			"es": "<p>Hace un tiempo mi compañera de piso compró un juego de mesa llamado Hive. Es un juego de estrategia en el que dos jugadores se enfrentan con el objetivo de rodear a la abeja reina del oponente. El juego es muy sencillo y rápido de jugar, pero tiene una profundidad estratégica que lo hace muy interesante. Por eso, para permitir que jueguen más de dos jugadores, para poder crear piezas personalizadas y para jugar con una amiga que vivía lejos, decidí crear una versión online.</p><p>Como todo lo que tiene que ver en tiempo real en programación ha traído sus retos técnicos como desincronizaciones, caídas de conexión, reconexiones, keep-alives… lo que lo ha hecho un proyecto mucho más interesante de lo que esperaba</p>Está desarrollado con Godot, compila a Android, iOS, Web, MacOS, Windows y Linux, lo que me permite que mis amigos puedan jugarlo usen la plataforma que usen<p>Para el backend del servidor estoy usando Node.js con SQLite y Express, para guardar la información de sesiones que se juegan en modo por turnos, y Socket.IO, para las partidas en tiempo real</p><p>Todavía queda trabajo por hacer, como por ejemplo, juegos para +2 jugadores o un sistema de sugerencias para colocar o mover piezas, ya que aunque se validan y rechazan en el servidor si no es un movimiento válido, esa lógica de comprobación no está hecha en GDScript</p>",
+			"en": "<p>A while ago, my roommate bought a board game called Hive. It’s a strategy game where two players face off with the goal of surrounding the opponent’s queen bee. The game is very simple and quick to play, but it has a strategic depth that makes it very interesting. For that reason, to allow more than two players to play and to be able to create custom pieces and to play with a friend who lived far away, I decided to create an online version.</p><p>As everything related to real-time in programming has brought its technical challenges like desynchronizations, connection drops, reconnections, keep-alives… which has made it a much more interesting project than I expected</p>It’s developed with Godot, compiles to Android, iOS, Web, MacOS, Windows, and Linux, which allows my friends to play it no matter what platform they use<p>For the server backend, I’m using Node.js with SQLite and Express, to save the information of the sessions that are played in turn-based mode, and Socket.IO, for real-time games</p><p>There is still work to be done, such as +2 player games or a suggestion system to place or move pieces, since although they are validated and rejected on the server if it is not a valid move, that verification logic is not done in GDScript</p>"
+		},
+		"logo": "/images/projects/hive/hive_logo.png",
+		"images": [
+			"/images/projects/hive/hive_main_menu.png",
+			"/images/projects/hive/hive_create_room.png",
+			"/images/projects/hive/hive_waiting_room.png",
+			"/images/projects/hive/hive_match_start.png",
+			"/images/projects/hive/hive_placed_tiles.png"
+		],
+		"technologies": ["javascript", "nodejs", "socketio", "express", "sqlite", "godot"]
+	},
+	{
+		"name": {
+			"es": "Spending Manager",
+			"en": "Spending Manager"
+		},
+		"shortDescription": {
+			"es": "Gestor de gastos personal con ingresos y gastos automáticos",
+			"en": "Personal spending manager with automated expenses and incomes"
+		},
+		"description": {
+			"es": "<p>Después de mucho tiempo usando YNAB, me enamoré de la manera que tenía de recoger mis gastos sin yo tener que meterlos a mano, pero también odiaba la inflexibilidad para meter ciertos gastos periodicos por mes</p>Por eso y por otras cosas (subieron la subscripción de precio un 30%) decidí hacer una a mi medida<p>Para ello estuve investigando servicios de OpenBanking como Plaid o TrueLayer, y aunque ambos funcionaban y los implementé temporalmente para probar sus Sandbox(es), el acceso a datos productivos era muy complicado de conseguir o era demasiado caro</p>Así que el proyecto quedó estancado durante unos meses, hasta que un día se me ocurrió que podía extraer los gastos directamente desde mis notificaciones de Google Wallet, lo que me permite guardar la ubicación exacta del gasto, la cantidad y la tarjeta en la que se ha cargado<p>Ciertos gastos, como subscripciones o ingresos no se añaden solos, pero importando mensualmente el CSV que me proporciona mi banco y con un algoritmo que elimina duplicados, es 100% funcional y bastante transparente Me permite categorizar mis gastos, localizarlos, generar un plan de gastos para el mes o establecer un límite de ahorro. Funciona bastante parecido a YNAB, la mayor diferencia es que el comienzo del mes es el primer día que se ingresa la nómina</p>",
+			"en": "<p>After a long time using YNAB, I fell in love with the way it collected my expenses without me having to enter them manually, but I also hated the inflexibility to setup certain periodic expenses per month</p>For that reason and many others (they raised the subscription price by 30%) I decided to make one to my liking<p>To do this, I researched OpenBanking services like Plaid or TrueLayer, and although both worked andwere implemented them temporarily to test their Sandboxes, receiving access to productive data was really complicated or expensive</p>So the project was stalled for a few months, until one day it occurred to me that I could extract expenses directly from my Google Wallet notifications, which allows me to save the exact location of the expense, the amount, and the card on which it was charged<p>Certain expenses, such as subscriptions or income are not added automatically, but by importing on a monthly basis the CSV export that my bank provides me and with an algorithm that removes duplicates, it is 100% functional and quite transparent. It allows me to categorize my expenses, locate them, generate a spending plan for the month, or set a savings limit. It works quite similar to YNAB, the biggest difference is that the beginning of the month is the first day the payroll is received</p>"
+		},
+		"images": [],
+		"technologies": ["flutter", "flutterbloc", "golang", "fiber", "postgresql", "docker"]
+	},
+	{
+		"name": {
+			"es": "MK Tracker",
+			"en": "MK Tracker"
+		},
+		"shortDescription": {
+			"es": "Seguimiento de partidas de Mario Kart",
+			"en": "Mario Kart game tracking"
+		},
+		"description": {
+			"es": "<p>Durante gran parte del año pasado mis compañeros de piso y yo estuvimos obsesionados con Mario Kart, todos los días jugabamos, y llegó un momento en el que todo el mundo estaba picado a ver quien era el mejor</p><p>Creé una web para llevar las victorias y estadísticas de cada uno, la web permitía guardar coche, parapente, ruedas, personaje, puntuación y torneo</p><p>El total de puntos por persona se suma y hay un podio al finalizar la temporada</p>",
+			"en": "<p>For much of last year my flatmates and I were obsessed with Mario Kart, we played every day, and it got to a point where everyone was in a fight to see who was the best.</p><p>I created a website to keep the victories and statistics of each one, the website allowed to save car, glider, wheels, character, score and tournament.</p><p>The total points per person are added up and there is a podium at the end of the season.</p>"
+		},
+		"logo": "/images/projects/mktracker/mktracker-logo.webp",
+		"images": [
+			"/images/projects/mktracker/main-page-no-tournament.png",
+			"/images/projects/mktracker/main-page-tournament-1.png",
+			"/images/projects/mktracker/main-page-tournament-2.png",
+			"/images/projects/mktracker/profile-page.png",
+			"/images/projects/mktracker/character-select-no-filter.png",
+			"/images/projects/mktracker/character-select-filter.png",
+			"/images/projects/mktracker/select-kart-page.png"
+		],
+		"technologies": ["typescript", "nextjs", "prisma", "postgresql", "docker"]
+	},
+	{
+		"name": {
+			"es": "Micro Control",
+			"en": "Micro Control"
+		},
+		"shortDescription": {
+			"es": "Gestor de microfófonos abiertos/cerrados pa un pleno en un ayuntamiento",
+			"en": "Open/closed microphones manager for a council meeting"
+		},
+		"description": {
+			"es": "<p>Desarrollé una aplicación que se comunicaba con undispositivo de la marca <strong>Tizen</strong> que permitía abrir y cerrar los microfónos de un pleno en un ayuntamiento</p><p>Trabajaba con multiples modos de funcionamiento, pero la aplicación permitía a los concejales abrir y cerrar su microfóno, y al presidente del pleno abrir y cerrar el microfóno de los concejales</p><p>También permitía agrupar microfonos para apagarlos o activarlos a la vez, renombrar micrófonos y tenía una función de busqueda para encontrarlos más facilmente</p><p>La aplicación se comunicaba con el dispositivo mediante un socket TCP</p> <p>Esta aplicación sigue funcionado en un ayuntamiento a día de hoy</p>",
+			"en": "<p>I developed an application that communicated with a<strong>Tizen</strong>device that allowed to open and close the microphones of a council meeting</p><p>It worked with multiple operating modes, but the application allowed councilors to open and close their microphone, and the president of the council to open and close the microphone of the councilors</p><p>It also allowed to group microphones to turn them off or on at the same time, rename microphones and had a search function to find them more easily</p><p>The application communicated with the device through a TCP socket</p> <p>Esta aplicación sigue funcionado en un ayuntamiento a día de hoy</p>"
+		},
+		"images": [],
+		"technologies": ["flutter"]
+	},
+	{
+		"name": {
+			"es": "WebRTC P2P streaming",
+			"en": "WebRTC P2P streaming"
+		},
+		"shortDescription": {
+			"es": "Streaming de video local P2P con WebRTC",
+			"en": "P2P local video streaming with WebRTC"
+		},
+		"description": {
+			"es": "<p>Este proyecto empezó como una manera de aprender WebRTC, pero ví que se podría usar no solo para cosas como video chats, si no para streaming de video de cualquier tipo así que decidí implementarlo</p><p>La plataforma es relativamente simple, sincroniza avance del video entre los usuarios, cuando cualquier usuario lo para el video se para y tiene un simple chat en tiempo real</p><p>La plataforma usa un servidor de Socket.io como orquestrador y Svelte para el frontend. Las sesiones se guardan en memoría, ya que siendo volatiles no tiene sentido guardarlas en una base de datos</p><p>Es más una prueba de concepto que cualquier otra cosa, ya que solo permite los codecs de video que acepte tu navegador, pero funciona</p>",
+			"en": "<p>This project started as a way to learn WebRTC, but I saw that it could be used not only for things like video chats, but for video streaming of any kind, so I decided to implement it</p><p>The platform is relatively simple, it synchronizes video progress between users, when any user stops it, the video stops and it has a simple real-time chat</p><p>The platform uses a Socket.io server as an orchestrator and Svelte for the frontend. Sessions are stored in memory, as they are volatile it doesn’t make sense to store them in a database</p><p>It is more of a proof of concept than anything else, as it only allows the video codecs that your browser accepts, but it works</p>"
+		},
+		"images": [],
+		"technologies": ["html", "css", "javascript", "svelte", "socketio", "nodejs", "express"]
+	},
+	{
+		"name": {
+			"es": "Dndmin",
+			"en": "Dndmin"
+		},
+		"shortDescription": {
+			"es": "Gestor de partidas y personajes de Dungeons and Dragons",
+			"en": "Dungeons and Dragons game and character manager"
+		},
+		"description": {
+			"es": "<p>Como comento en otra parte de esta web, crear un gestor de partidas de Dungeons and Dragons es recurrente</p><p>Este es el primer intento que de verdad intenté hacer algo serio, y aunque no llegué a terminar toda la funcionalidad, conseguí desarrollar un prototipo funcional que usé en partidas</p><p>Este proyecto me enseñó muchísimo sobre diseño de sistemas, deuda técnica y seguridad de aplicaciones</p><p>Era el proyecto mas grande que enfrentaba hasta la fecha y le dediqué mucho tiempo, pero al no tener tanta experiencia se hizo difícil mantenerlo y seguir desarrollándolo</p>",
+			"en": "<p>As I mention elsewhere on this website, creating a Dungeons and Dragons game manager is a recurring theme</p><p>This is the first attempt that I really tried to do something serious, and although I didn’t finish all the functionality, I managed to develop a functional prototype that I used in games</p><p>This project taught me a lot about system design, technical debt, and application security</p><p>It was the biggest project I had faced to date and I spent a lot of time on it, but not having so much experience made it difficult to maintain and continue developing it</p>"
+		},
+		"images": [],
+		"technologies": ["nodejs", "express", "socketio", "postgresql", "flutter"]
+	},
+	{
+		"name": {
+			"es": "Kakuma",
+			"en": "Kakuma"
+		},
+		"shortDescription": {
+			"es": "Plataforma para un seleccionador de karate para manejar y etiquetar clips de video",
+			"en": "Platform for a karate selector to manage and tag video clips"
+		},
+		"description": {
+			"es": "<p>Un seleccionador de karate necesitaba una manera de etiquetar y guardar clips de video de sus competiciones, tanto para encontrar a gente nueva como para que sus competidores mejorasen.</p><p>Desarrollé una aplicación de escritorio junto con una amiga que permitía etiquetar clips de video, guardarlos en una base de datos y buscarlos por etiquetas</p><p>La aplicación permitía añadir etiquetas a los clips, buscar clips por etiquetas, reproducir clips y guardar clips en la base de datos</p><p>La aplicación se desarrolló en Electron con React y la base de datos era SQLite, para el manejo de clips y de video usabamos ffmpeg</p>",
+			"en": "<p>An Olympic karate coach needed a way to tag and save video clips of his competitions, both to find new people and to help his competitors improve.</p><p>I developed a desktop application with a friend that allowed video clips to be tagged, saved to a database, and searched by tags.</p><p>The application allowed adding tags to clips, searching clips by tags, playing clips, and saving clips to the database.</p><p>The application was developed in Electron with React and the database was SQLite, for clip and video management we used ffmpeg.</p>"
+		},
+		"images": [],
+		"technologies": ["javascript", "electronjs", "react", "sqlite", "ffmpeg"]
+	},
+	{
+		"name": {
+			"es": "Sparkle",
+			"en": "Sparkle"
+		},
+		"shortDescription": {
+			"en": "Dumb social media app for my friends and I",
+			"es": "Red social tonta para mis amigos y yo"
+		},
+		"description": {
+			"es": "<p>Una red social tonta que hice para mis amigos y yo, que permitía subir fotos y comentarios, y que tenía un sistema de likes</p><p>Esta aplicación la desarrollé por dos razones, la primera era que quería usar Angular para un proyecto grande y la segunda era que tenía una amiga que quería aprender lo básico del desarrollo web y backend</p><p>Durante el verano usamos Angular y Spring para hacer una red social simple</p><p>La aplicación permitía subir fotos, comentar fotos, dar likes a fotos, se podían subir stories como en instagram y ver y seguir el perfil de otros usuarios</p>",
+			"en": "<p>A dumb social media app that I made for my friends and I, which allowed uploading photos and comments, and had a like system</p><p>I developed this application for two reasons, the first was that I wanted to use Angular for a large project and the second was that I had a friend who wanted to learn the basics of web and backend development</p><p>During the summer we used Angular and Spring to make a simple social network</p><p>The application allowed uploading photos, commenting on photos, liking photos, stories could be uploaded like on Instagram, and viewing and following other users’ profiles</p>"
+		},
+		"images": [],
+		"technologies": ["java", "spring", "angular", "typescript", "postgresql", "amazons3"]
+	},
+	{
+		"name": {
+			"es": "TikVault",
+			"en": "TikVault"
+		},
+		"shortDescription": {
+			"es": "Aplicación para guardar y clasificar videos de TikTok",
+			"en": "Application to save and classify TikTok videos"
+		},
+		"description": {
+			"es": "<p>Durante la pandemia, como gran parte del mundo, me hice tiktok. Siempre me ha gustado mucho cocinar, y me salian muchisimas recetas en TikTok.</p><p>En aquel momento TikTok no tenía un sistema de marcadores como tiene ahora, así que decidí crear una solución yo mismo</p><p>Desarrollé una aplicación que permitía compartir videos de tiktok directamente a la aplicación para guardarlos</p><p>La aplicación extraia todos los datos del vídeo (descripción, hashtags, numero de likes, numero de comentarios, etc) y los guardaba en una base de datos local, junto con el video</p><p>La aplicación permitía buscar videos y clasificarlos en carpetas</p><p>Esta aplicación la publiqué en Google Play, y aunque no tuvo demasiadas descargas, me sirvió para aprender mucho sobre publicación de aplicaciones y el ciclo completo de delivery y mantenimiento</p>",
+			"en": "<p>During the pandemic, like much of the world, I got into TikTok. I’ve always loved cooking, and I found a lot of recipes on TikTok.</p><p>At that time TikTok didn’t have a bookmark system like it does now, so I decided to create a solution myself</p><p>I developed an application that allowed sharing TikTok videos directly to the application to save them</p><p>The application extracted all the video data (description, hashtags, number of likes, number of comments, etc.) and saved it in a local database, along with the video</p><p>The application allowed searching for videos and classifying them into folders</p><p>I published this application on Google Play, and although it didn't get too many downloads, it helped me learn a lot about application publishing and the complete delivery and maintenance cycle.</p>"
+		},
+		"images": [],
+		"technologies": ["flutter", "sqlite", "googleplay"]
+	},
+	{
+		"name": {
+			"es": "Tkt io",
+			"en": "Tkt io"
+		},
+		"shortDescription": {
+			"es": "Plataforma para gestionar tickets de soporte",
+			"en": "Platform to manage support tickets"
+		},
+		"description": {
+			"en": "<p>Una de las primeras aplicaciones que desarrollé en flutter, y la primera que vería público real.</p><p>Desarrollé esta aplicación para Telsokit, una empresa de diseño de hardware.</p><p>La apliación se conectaba con uno de sus dispositivos para reproducir mensajes pregrabados por sistemas de megafonía</p> ",
+			"es": "<p>One of the first applications I developed in flutter, and the first one that would see real public</p><p>I developed this application for Telsokit, a hardware design company.</p><p>The application connected to one of their devices to play pre-recorded messages by public address systems</p>"
+		},
+		"images": [],
+		"technologies": ["flutter"]
 	}
 ]

@@ -6,6 +6,7 @@
 	import TechnologiesList from '$components/common/TechnologiesList.svelte';
 	import projects from '$lib/data/projects.json';
 	import type { Project } from '$lib/types/project';
+	import { t } from '$lib/i18n/i18n';
 	import Chevron from '$components/common/Icons/Chevron.svelte';
 
 	const typedProjects: Project[] = projects;
@@ -20,7 +21,11 @@
 				on:click={() => projectsOpen.update((n) => ((n[i] = !n[i]), n))}
 				class="project-header"
 			>
-				<img src={logo} alt={name[$locale]} />
+				{#if logo}
+					<img class="project-image" src={logo} alt={name[$locale]} />
+				{:else}
+					<span class="project-image-placeholder">{$t('content.logoNotAvailable')}</span>
+				{/if}
 				<div>
 					<h2>{name[$locale]}</h2>
 					<h3>{shortDescription[$locale]}</h3>
@@ -53,15 +58,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
 		width: 100%;
 
 		margin: 0;
 		padding: 0;
 
 		border-top: solid 1px var(--foreground);
-		border-bottom: solid 1px var(--foreground);
-		padding: 1rem;
 	}
 
 	.project-item {
@@ -69,6 +71,8 @@
 		flex-direction: column;
 		align-items: start;
 		width: 100%;
+		padding: 1rem;
+		border-bottom: solid 1px var(--foreground);
 	}
 
 	.project-header {
@@ -86,9 +90,19 @@
 		width: 100%;
 	}
 
-	.project-header img {
-		width: 6rem;
+	.project-header > .project-image {
+		min-width: 6rem;
+		max-width: 6rem;
 		height: 6rem;
+
+		object-fit: contain;
+	}
+
+	.project-image-placeholder {
+		min-width: 6rem;
+		max-width: 6rem;
+
+		text-align: center;
 	}
 
 	.project-content {

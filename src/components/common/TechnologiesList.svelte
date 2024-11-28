@@ -11,7 +11,8 @@
 	{#each items as item}
 		<li class="tech-item">
 			<img
-				style={$themeStore === THEMES.DARK && typedTechnologies[item].isTooDark
+				style={($themeStore === THEMES.DARK && typedTechnologies[item].isTooDark) ||
+				($themeStore === THEMES.LIGHT && typedTechnologies[item].isTooLight)
 					? 'filter: invert();'
 					: ''}
 				width="24px"

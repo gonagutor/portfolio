@@ -31,7 +31,11 @@
 				"emailInvalid": "El correo electrónico no es válido"
 			}
 		},
-		"now": "Actualidad"
+		"now": "Actualidad",
+		"logoNotAvailable": "Logo no disponible"
+	},
+	"footer": {
+		"projects": "Algunos de estos proyectos los tengo públicos en mi <a href='https://github.com/gonagutor/' target='_blank'>GitHub</a>, algunos no, pero si te interesa alguno no dudes en contactarme. Tampoco es esta la vista completa de mis proyectos, mi carpeta de proyectos tiene 68 carpetas, cada proyecto con tecnologías diferentes"
 	},
 	"alt": {
 		"enableDarkMode": "Activar modo oscuro",
