@@ -40,7 +40,7 @@
 				{:else}
 					<span class="project-image-placeholder">{$t('content.logoNotAvailable')}</span>
 				{/if}
-				<div>
+				<div class="project-info-container">
 					<h2>{name[$locale]}</h2>
 					<h3>{shortDescription[$locale]}</h3>
 				</div>
@@ -114,6 +114,10 @@
 		object-fit: contain;
 	}
 
+	.project-header > .project-info-container {
+		font-size: 12px;
+	}
+
 	.project-image-placeholder {
 		min-width: 6rem;
 		max-width: 6rem;
@@ -162,9 +166,23 @@
 			padding: 0;
 		}
 
-		.project-header img {
-			width: 4rem;
-			height: 4rem;
+		.project-header > .project-image {
+			min-width: 3rem;
+			max-width: 3rem;
+
+			width: 3rem;
+		}
+
+		.project-header > .project-image-placeholder {
+			min-width: 3rem;
+			max-width: 3rem;
+			font-size: 0.5rem;
+
+			width: 3rem;
+		}
+
+		.project-header > .project-info-container {
+			font-size: 0.75rem;
 		}
 
 		.project-header h2 {
