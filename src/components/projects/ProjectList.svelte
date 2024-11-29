@@ -7,6 +7,7 @@
 	import projects from '$lib/data/projects.json';
 	import type { Project } from '$lib/types/project';
 	import { t } from '$lib/i18n/i18n';
+	import { themeStore, THEMES } from '$lib/stores/theme';
 	import Chevron from '$components/common/Icons/Chevron.svelte';
 	import { PUBLIC_DISABLE_POLITICALLY_INCLINED_PROJECTS } from '$env/static/public';
 
@@ -19,7 +20,7 @@
 </script>
 
 <ul class="project-list">
-	{#each typedProjects as { name, description, shortDescription, logo, images, technologies }, i}
+	{#each typedProjects as { name, description, shortDescription, logo, images, technologies, isTooDark, isTooLight }, i}
 		<li class="project-item">
 			<button
 				type="button"
@@ -27,7 +28,15 @@
 				class="project-header"
 			>
 				{#if logo}
-					<img class="project-image" src={logo} alt={name[$locale]} />
+					<img
+						class="project-image"
+						style={($themeStore === THEMES.DARK && isTooDark) ||
+						($themeStore === THEMES.LIGHT && isTooLight)
+							? 'filter: invert();'
+							: ''}
+						src={logo}
+						alt={name[$locale]}
+					/>
 				{:else}
 					<span class="project-image-placeholder">{$t('content.logoNotAvailable')}</span>
 				{/if}
