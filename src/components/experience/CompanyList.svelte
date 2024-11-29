@@ -71,6 +71,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: start;
+		margin-top: 2rem;
 		width: 100%;
 	}
 
@@ -111,6 +112,27 @@
 			flex-direction: column;
 			align-items: start;
 			gap: 1rem;
+		}
+
+		.company-list {
+			padding: 0;
+			margin: 0;
+		}
+
+		.company-info {
+			flex-direction: column;
+			align-items: start;
+			gap: 1rem;
+		}
+
+		.company-info > img {
+			max-width: 80vw;
+			width: -webkit-fill-available;
+			width: -moz-available;
+			height: auto;
+		}
+		.company-project-item img {
+			height: auto;
 		}
 	}
 </style>
