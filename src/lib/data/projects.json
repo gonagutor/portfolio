@@ -233,12 +233,12 @@
 			"en": "Tkt io"
 		},
 		"shortDescription": {
-			"es": "Plataforma para gestionar tickets de soporte",
-			"en": "Platform to manage support tickets"
+			"en": "Plataform to play prerecorded audio messages in public address systems",
+			"es": "Plataforma para reproducir mensajes de audio pregrabados en sistemas de megafonía"
 		},
 		"description": {
-			"en": "<p>Una de las primeras aplicaciones que desarrollé en flutter, y la primera que vería público real.</p><p>Desarrollé esta aplicación para Telsokit, una empresa de diseño de hardware.</p><p>La apliación se conectaba con uno de sus dispositivos para reproducir mensajes pregrabados por sistemas de megafonía</p> ",
-			"es": "<p>One of the first applications I developed in flutter, and the first one that would see real public</p><p>I developed this application for Telsokit, a hardware design company.</p><p>The application connected to one of their devices to play pre-recorded messages by public address systems</p>"
+			"es": "<p>Una de las primeras aplicaciones que desarrollé en flutter, y la primera que vería público real.</p><p>Desarrollé esta aplicación para Telsokit, una empresa de diseño de hardware.</p><p>La apliación se conectaba con uno de sus dispositivos para reproducir mensajes pregrabados por sistemas de megafonía</p> ",
+			"en": "<p>One of the first applications I developed in flutter, and the first one that would see real public</p><p>I developed this application for Telsokit, a hardware design company.</p><p>The application connected to one of their devices to play pre-recorded messages by public address systems</p>"
 		},
 		"images": [],
 		"technologies": ["flutter"]
